@@ -33,7 +33,6 @@
 
 1. **Clone the Repository, Create Virtual Environment**:
    ```bash
-   git clone https://github.com/rubayethasan21/hnunisync.git
    cd hnunisync
    python3 -m venv venv
    source venv/bin/activate
@@ -82,4 +81,3 @@ For questions or support, please reach out to the repository owner or open an is
 ## Links
 
 - Project URL: [https://hnunisync.de](https://hnunisync.de)
-- GitHub Repository: [https://github.com/rubayethasan21/hnunisync](https://github.com/rubayethasan21/hnunisync)
