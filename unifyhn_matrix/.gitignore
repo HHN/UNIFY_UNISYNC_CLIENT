@@ -1,0 +1,53 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+matrix-env/
+
+# Synapse database files
+homeserver.db
+homeserver.db-shm
+homeserver.db-wal
+
+# Synapse log files
+homeserver.log
+localhost.log.config
+
+# Synapse PID file
+homeserver.pid
+
+# Synapse signing key file
+localhost.signing.key
+
+# Media storage (Synapse media files)
+media_store/
+
+# Configuration files (contains secrets)
+homeserver.yaml
+
+homeserver_unifyhn.yaml
+
+restart_matrix.sh
+
+# Log files
+*.log
+*.log.*
+
+# Temporary files
+*.tmp
+*.swp
+
+# System files
+.DS_Store
+
+unifyhn.de.signing.key
+unifyhn.de.log.config
+
+*signing.key
+*log.config
+
+*.key
+*.config
+
