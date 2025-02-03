@@ -1,4 +1,4 @@
-# HNUnisync.de - Synchronizing ILIAS Courses with Matrix Rooms
+# hnunisync.de - Synchronizing ILIAS Courses with Matrix Rooms
 
 **HNUnisync.de** is a web application designed to streamline communication and collaboration for educational institutions by synchronizing **ILIAS** (a popular learning management system) courses with **Matrix** communication rooms. The tool automates the process of syncing enrolled students from ILIAS into Matrix rooms, creating a seamless integration between course content and collaborative discussion environments.
 
