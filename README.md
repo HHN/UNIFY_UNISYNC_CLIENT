@@ -159,3 +159,12 @@ For support or inquiries, please open an issue on the GitHub repository or reach
 ## Links
 
 - Matrix Server URL: [https://unifyhn.de](https://unifyhn.de)
+
+## License
+- This project is licensed under [Apache 2.0](LICENSE). Copyright 2024 [name of the subject] , Hochschule Heilbronn.
+
+## Acknowledgments
+
+This project was developed as part of the **InduKo Project**, funded by **Stiftung Innovation in der Hochschullehre**. We also acknowledge the support from students, faculty, and contributors who have been part of this collaborative effort.
+
+For more information about the InduKo research project, visit the official website.
