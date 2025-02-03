@@ -24,31 +24,26 @@
 
 ## Installation & Setup
 
-1. **Clone the Repository**:
+1. **Setup the initaial project, installing and running Matrix Server by running a setup.sh file**:
    ```bash
-   git clone https://github.com/rubayethasan21/unifyhn_matrix.git
    cd unifyhn_matrix
-   ```
-
-2. **Setup the initaial project, installing and running Matrix Server by running a setup.sh file**:
-   ```bash
    chmod +x setup.sh
    ./setup.sh
    ```
 
-3. **Matrix server configuration**:
+2. **Matrix server configuration**:
    Configure the following environment variables to connect with the Matrix Synapse server:
    - Update homeserver.yaml file as the configuration written in the homeserver_unifyhn.yaml file
    
 
 
-4. **Re Start the Matrix Server**:
+3. **Re Start the Matrix Server**:
    ```bash
    synctl restart
    synctl start
    synctl stop
    ```
-5. **Verify the Server Status**:
+4. **Verify the Server Status**:
    Ensure that your Matrix Synapse server is running properly and that the integration service can communicate with it.
 
 ## Usage
@@ -74,4 +69,3 @@ For support or inquiries, please open an issue on the GitHub repository or reach
 ## Links
 
 - Matrix Server URL: [https://unifyhn.de](https://unifyhn.de)
-- GitHub Repository: [https://github.com/rubayethasan21/unifyhn_matrix](https://github.com/rubayethasan21/unifyhn_matrix)
