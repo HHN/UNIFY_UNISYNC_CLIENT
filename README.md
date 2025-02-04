@@ -2,6 +2,16 @@
 
 **HNUnisync.de** is a web application designed to streamline communication and collaboration for educational institutions by synchronizing **ILIAS** (a popular learning management system) courses with **Matrix** communication rooms. The tool automates the process of syncing enrolled students from ILIAS into Matrix rooms, creating a seamless integration between course content and collaborative discussion environments.
 
+Heilbronn University is researching advanced technical tools and didactic approaches designed to foster collaboration and interaction. The primary goal is to enhance and facilitate interdisciplinary, inter-faculty, and inter-university cooperation. Through the InduKo research project, we aim to strengthen this collaboration using innovative digital tools and modern, digitally supported strategies that boost motivation and foster innovation through partnership.
+
+Unisync streamlines communication by automating the creation of messenger chat groups that correspond to course rooms in ILIAS. Designed as a lightweight and adaptable solution, Unisync could be adapted and integrated with other learning management systems (LMS) beyond ILIAS. One fundamental constraint in its development was the lack of direct system access to ILIAS. As a result, a web scraper was used to extract course data and transfer it to the Matrix system. This method allows Unisync to function without requiring any modifications to ILIAS or other LMS platforms, preserving their security and system integrity. Additionally, it ensures that the solution remains highly adaptable to different university environments without increasing maintenance complexity or security risks.
+
+Unisync does not require additional software installation for the users - teachers can generate chat groups simply by accessing a link stored in ILIAS or bookmarked in their browser. After logging into the LMS, course data is transferred to the Matrix system, where chat groups are automatically created, participants are assigned, and invitations are sent. These groups can then be accessed through Matrix-based messengers such as Element or FluffyChat. The system’s flexibility, security, and low maintenance requirements make it an efficient and scalable solution for universities looking to enhance digital collaboration.
+
+Unisync showcases how a lightweight solution can create Matrix-based course rooms from LMS data without deep system integration. By demonstrating an approach that is easy to implement and does not require deep integration, it highlights how universities can extend their digital infrastructure securely and efficiently while maintaining system integrity.
+
+InduKo Project was funded by Stiftung Innovation in der Hochschullehre (August 2021 - July 2024).
+
 ## Key Features
 
 1. **User Authentication**:
