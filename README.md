@@ -1,6 +1,11 @@
-# hnunisync.de - Synchronizing ILIAS Courses with Matrix Rooms
+<p align="center">
+  <a href="https://www.hs-heilbronn.de/de/induko" target="blank"><img src="induko_image.png" width="600" alt="Induko Logo" /></a>
+</p>
 
-**HNUnisync.de** is a web application designed to streamline communication and collaboration for educational institutions by synchronizing **ILIAS** (a popular learning management system) courses with **Matrix** communication rooms. The tool automates the process of syncing enrolled students from ILIAS into Matrix rooms, creating a seamless integration between course content and collaborative discussion environments.
+[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
+[circleci-url]: https://circleci.com/gh/nestjs/nest
+
+<p align="center">
 
 Heilbronn University is researching advanced technical tools and didactic approaches designed to foster collaboration and interaction. The primary goal is to enhance and facilitate interdisciplinary, inter-faculty, and inter-university cooperation. Through the InduKo research project, we aim to strengthen this collaboration using innovative digital tools and modern, digitally supported strategies that boost motivation and foster innovation through partnership.
 
@@ -10,7 +15,13 @@ Unisync does not require additional software installation for the users - teache
 
 Unisync showcases how a lightweight solution can create Matrix-based course rooms from LMS data without deep system integration. By demonstrating an approach that is easy to implement and does not require deep integration, it highlights how universities can extend their digital infrastructure securely and efficiently while maintaining system integrity.
 
-InduKo Project was funded by Stiftung Innovation in der Hochschullehre (August 2021 - July 2024).
+<a href="https://www.hs-heilbronn.de/en/projekt-induko-2cab68e84c21b797" target="_blank">InduKo</a> Project was funded by  <a href="https://stiftung-hochschullehre.de/en/" target="_blank">Stiftung Innovation in der Hochschullehre</a> (August 2021 - July 2024).
+
+</p>
+
+# hnunisync.de - Synchronizing ILIAS Courses with Matrix Rooms
+
+**HNUnisync.de** is a web application designed to streamline communication and collaboration for educational institutions by synchronizing **ILIAS** (a popular learning management system) courses with **Matrix** communication rooms. The tool automates the process of syncing enrolled students from ILIAS into Matrix rooms, creating a seamless integration between course content and collaborative discussion environments.
 
 ## Key Features
 
