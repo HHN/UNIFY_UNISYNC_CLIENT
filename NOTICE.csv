@@ -1,0 +1,1719 @@
+Package Title,Version,Authors,Description,Declared License,Discovered License(s),Package Manager,Package Homepage,Dependency Path(s),Issue Resolution Notes
+beautifulsoup4,4.12.3,Leonard Richardson <leonardr@segfault.org>,"Beautiful Soup is a library that makes it easy to scrape information
+from web pages. It sits atop an HTML or XML parser, providing Pythonic
+idioms for iterating, searching, and modifying the parse tree.
+
+# Quick start
+
+```
+>>> from bs4 import BeautifulSoup
+>>> soup = BeautifulSoup(""<p>Some<b>bad<i>HTML"")
+>>> print(soup.prettify())
+<html>
+ <body>
+  <p>
+   Some
+   <b>
+    bad
+    <i>
+     HTML
+    </i>
+   </b>
+  </p>
+ </body>
+</html>
+>>> soup.find(string=""bad"")
+'bad'
+>>> soup.i
+<i>HTML</i>
+#
+>>> soup = BeautifulSoup(""<tag1>Some<tag2/>bad<tag3>XML"", ""xml"")
+#
+>>> print(soup.prettify())
+<?xml version=""1.0"" encoding=""utf-8""?>
+<tag1>
+ Some
+ <tag2/>
+ bad
+ <tag3>
+  XML
+ </tag3>
+</tag1>
+```
+
+To go beyond the basics, [comprehensive documentation is available](https://www.crummy.com/software/BeautifulSoup/bs4/doc/).
+
+# Links
+
+* [Homepage](https://www.crummy.com/software/BeautifulSoup/bs4/)
+* [Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+* [Discussion group](https://groups.google.com/group/beautifulsoup/)
+* [Development](https://code.launchpad.net/beautifulsoup/)
+* [Bug tracker](https://bugs.launchpad.net/beautifulsoup/)
+* [Complete changelog](https://git.launchpad.net/beautifulsoup/tree/CHANGELOG)
+
+# Note on Python 2 sunsetting
+
+Beautiful Soup's support for Python 2 was discontinued on December 31,
+2020: one year after the sunset date for Python 2 itself. From this
+point onward, new Beautiful Soup development will exclusively target
+Python 3. The final release of Beautiful Soup 4 to support Python 2
+was 4.9.3.
+
+# Supporting the project
+
+If you use Beautiful Soup as part of your professional work, please consider a
+[Tidelift subscription](https://tidelift.com/subscription/pkg/pypi-beautifulsoup4?utm_source=pypi-beautifulsoup4&utm_medium=referral&utm_campaign=readme).
+This will support many of the free software projects your organization
+depends on, not just Beautiful Soup.
+
+If you use Beautiful Soup for personal projects, the best way to say
+thank you is to read
+[Tool Safety](https://www.crummy.com/software/BeautifulSoup/zine/), a zine I
+wrote about what Beautiful Soup has taught me about software
+development.
+
+# Building the documentation
+
+The bs4/doc/ directory contains full documentation in Sphinx
+format. Run `make html` in that directory to create HTML
+documentation.
+
+# Running the unit tests
+
+Beautiful Soup supports unit test discovery using Pytest:
+
+```
+$ pytest
+```
+
+",MIT,,Pip,https://pypi.org/project/beautifulsoup4/,beautifulsoup4,
+fastapi,0.114.1,=?utf-8?q?Sebasti=C3=A1n_Ram=C3=ADrez?= <tiangolo@gmail.com>,"<p align=""center"">
+  <a href=""https://fastapi.tiangolo.com""><img src=""https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png"" alt=""FastAPI""></a>
+</p>
+<p align=""center"">
+    <em>FastAPI framework, high performance, easy to learn, fast to code, ready for production</em>
+</p>
+<p align=""center"">
+<a href=""https://github.com/fastapi/fastapi/actions?query=workflow%3ATest+event%3Apush+branch%3Amaster"" target=""_blank"">
+    <img src=""https://github.com/fastapi/fastapi/actions/workflows/test.yml/badge.svg?event=push&branch=master"" alt=""Test"">
+</a>
+<a href=""https://coverage-badge.samuelcolvin.workers.dev/redirect/fastapi/fastapi"" target=""_blank"">
+    <img src=""https://coverage-badge.samuelcolvin.workers.dev/fastapi/fastapi.svg"" alt=""Coverage"">
+</a>
+<a href=""https://pypi.org/project/fastapi"" target=""_blank"">
+    <img src=""https://img.shields.io/pypi/v/fastapi?color=%2334D058&label=pypi%20package"" alt=""Package version"">
+</a>
+<a href=""https://pypi.org/project/fastapi"" target=""_blank"">
+    <img src=""https://img.shields.io/pypi/pyversions/fastapi.svg?color=%2334D058"" alt=""Supported Python versions"">
+</a>
+</p>
+
+---
+
+**Documentation**: <a href=""https://fastapi.tiangolo.com"" target=""_blank"">https://fastapi.tiangolo.com</a>
+
+**Source Code**: <a href=""https://github.com/fastapi/fastapi"" target=""_blank"">https://github.com/fastapi/fastapi</a>
+
+---
+
+FastAPI is a modern, fast (high-performance), web framework for building APIs with Python based on standard Python type hints.
+
+The key features are:
+
+* **Fast**: Very high performance, on par with **NodeJS** and **Go** (thanks to Starlette and Pydantic). [One of the fastest Python frameworks available](#performance).
+* **Fast to code**: Increase the speed to develop features by about 200% to 300%. *
+* **Fewer bugs**: Reduce about 40% of human (developer) induced errors. *
+* **Intuitive**: Great editor support. <abbr title=""also known as auto-complete, autocompletion, IntelliSense"">Completion</abbr> everywhere. Less time debugging.
+* **Easy**: Designed to be easy to use and learn. Less time reading docs.
+* **Short**: Minimize code duplication. Multiple features from each parameter declaration. Fewer bugs.
+* **Robust**: Get production-ready code. With automatic interactive documentation.
+* **Standards-based**: Based on (and fully compatible with) the open standards for APIs: <a href=""https://github.com/OAI/OpenAPI-Specification"" class=""external-link"" target=""_blank"">OpenAPI</a> (previously known as Swagger) and <a href=""https://json-schema.org/"" class=""external-link"" target=""_blank"">JSON Schema</a>.
+
+<small>* estimation based on tests on an internal development team, building production applications.</small>
+
+## Sponsors
+
+<!-- sponsors -->
+
+<a href=""https://blockbee.io?ref=fastapi"" target=""_blank"" title=""BlockBee Cryptocurrency Payment Gateway""><img src=""https://fastapi.tiangolo.com/img/sponsors/blockbee.png""></a>
+<a href=""https://platform.sh/try-it-now/?utm_source=fastapi-signup&utm_medium=banner&utm_campaign=FastAPI-signup-June-2023"" target=""_blank"" title=""Build, run and scale your apps on a modern, reliable, and secure PaaS.""><img src=""https://fastapi.tiangolo.com/img/sponsors/platform-sh.png""></a>
+<a href=""https://www.porter.run"" target=""_blank"" title=""Deploy FastAPI on AWS with a few clicks""><img src=""https://fastapi.tiangolo.com/img/sponsors/porter.png""></a>
+<a href=""https://bump.sh/fastapi?utm_source=fastapi&utm_medium=referral&utm_campaign=sponsor"" target=""_blank"" title=""Automate FastAPI documentation generation with Bump.sh""><img src=""https://fastapi.tiangolo.com/img/sponsors/bump-sh.svg""></a>
+<a href=""https://github.com/scalar/scalar/?utm_source=fastapi&utm_medium=website&utm_campaign=main-badge"" target=""_blank"" title=""Scalar: Beautiful Open-Source API References from Swagger/OpenAPI files""><img src=""https://fastapi.tiangolo.com/img/sponsors/scalar.svg""></a>
+<a href=""https://www.propelauth.com/?utm_source=fastapi&utm_campaign=1223&utm_medium=mainbadge"" target=""_blank"" title=""Auth, user management and more for your B2B product""><img src=""https://fastapi.tiangolo.com/img/sponsors/propelauth.png""></a>
+<a href=""https://www.withcoherence.com/?utm_medium=advertising&utm_source=fastapi&utm_campaign=website"" target=""_blank"" title=""Coherence""><img src=""https://fastapi.tiangolo.com/img/sponsors/coherence.png""></a>
+<a href=""https://www.mongodb.com/developer/languages/python/python-quickstart-fastapi/?utm_campaign=fastapi_framework&utm_source=fastapi_sponsorship&utm_medium=web_referral"" target=""_blank"" title=""Simplify Full Stack Development with FastAPI & MongoDB""><img src=""https://fastapi.tiangolo.com/img/sponsors/mongodb.png""></a>
+<a href=""https://zuplo.link/fastapi-gh"" target=""_blank"" title=""Zuplo: Scale, Protect, Document, and Monetize your FastAPI""><img src=""https://fastapi.tiangolo.com/img/sponsors/zuplo.png""></a>
+<a href=""https://liblab.com?utm_source=fastapi"" target=""_blank"" title=""liblab - Generate SDKs from FastAPI""><img src=""https://fastapi.tiangolo.com/img/sponsors/liblab.png""></a>
+<a href=""https://docs.render.com/deploy-fastapi?utm_source=deploydoc&utm_medium=referral&utm_campaign=fastapi"" target=""_blank"" title=""Deploy & scale any full-stack web app on Render. Focus on building apps, not infra.""><img src=""https://fastapi.tiangolo.com/img/sponsors/render.svg""></a>
+<a href=""https://www.coderabbit.ai/?utm_source=fastapi&utm_medium=badge&utm_campaign=fastapi"" target=""_blank"" title=""Cut Code Review Time & Bugs in Half with CodeRabbit""><img src=""https://fastapi.tiangolo.com/img/sponsors/coderabbit.png""></a>
+<a href=""https://github.com/deepset-ai/haystack/"" target=""_blank"" title=""Build powerful search from composable, open source building blocks""><img src=""https://fastapi.tiangolo.com/img/sponsors/haystack-fastapi.svg""></a>
+<a href=""https://databento.com/"" target=""_blank"" title=""Pay as you go for market data""><img src=""https://fastapi.tiangolo.com/img/sponsors/databento.svg""></a>
+<a href=""https://speakeasy.com?utm_source=fastapi+repo&utm_medium=github+sponsorship"" target=""_blank"" title=""SDKs for your API | Speakeasy""><img src=""https://fastapi.tiangolo.com/img/sponsors/speakeasy.png""></a>
+<a href=""https://www.svix.com/"" target=""_blank"" title=""Svix - Webhooks as a service""><img src=""https://fastapi.tiangolo.com/img/sponsors/svix.svg""></a>
+<a href=""https://www.stainlessapi.com/?utm_source=fastapi&utm_medium=referral"" target=""_blank"" title=""Stainless | Generate best-in-class SDKs""><img src=""https://fastapi.tiangolo.com/img/sponsors/stainless.png""></a>
+<a href=""https://www.permit.io/blog/implement-authorization-in-fastapi?utm_source=github&utm_medium=referral&utm_campaign=fastapi"" target=""_blank"" title=""Fine-Grained Authorization for FastAPI""><img src=""https://fastapi.tiangolo.com/img/sponsors/permit.png""></a>
+
+<!-- /sponsors -->
+
+<a href=""https://fastapi.tiangolo.com/fastapi-people/#sponsors"" class=""external-link"" target=""_blank"">Other sponsors</a>
+
+## Opinions
+
+""_[...] I'm using **FastAPI** a ton these days. [...] I'm actually planning to use it for all of my team's **ML services at Microsoft**. Some of them are getting integrated into the core **Windows** product and some **Office** products._""
+
+<div style=""text-align: right; margin-right: 10%;"">Kabir Khan - <strong>Microsoft</strong> <a href=""https://github.com/fastapi/fastapi/pull/26"" target=""_blank""><small>(ref)</small></a></div>
+
+---
+
+""_We adopted the **FastAPI** library to spawn a **REST** server that can be queried to obtain **predictions**. [for Ludwig]_""
+
+<div style=""text-align: right; margin-right: 10%;"">Piero Molino, Yaroslav Dudin, and Sai Sumanth Miryala - <strong>Uber</strong> <a href=""https://eng.uber.com/ludwig-v0-2/"" target=""_blank""><small>(ref)</small></a></div>
+
+---
+
+""_**Netflix** is pleased to announce the open-source release of our **crisis management** orchestration framework: **Dispatch**! [built with **FastAPI**]_""
+
+<div style=""text-align: right; margin-right: 10%;"">Kevin Glisson, Marc Vilanova, Forest Monsen - <strong>Netflix</strong> <a href=""https://netflixtechblog.com/introducing-dispatch-da4b8a2a8072"" target=""_blank""><small>(ref)</small></a></div>
+
+---
+
+""_I’m over the moon excited about **FastAPI**. It’s so fun!_""
+
+<div style=""text-align: right; margin-right: 10%;"">Brian Okken - <strong><a href=""https://pythonbytes.fm/episodes/show/123/time-to-right-the-py-wrongs?time_in_sec=855"" target=""_blank"">Python Bytes</a> podcast host</strong> <a href=""https://twitter.com/brianokken/status/1112220079972728832"" target=""_blank""><small>(ref)</small></a></div>
+
+---
+
+""_Honestly, what you've built looks super solid and polished. In many ways, it's what I wanted **Hug** to be - it's really inspiring to see someone build that._""
+
+<div style=""text-align: right; margin-right: 10%;"">Timothy Crosley - <strong><a href=""https://github.com/hugapi/hug"" target=""_blank"">Hug</a> creator</strong> <a href=""https://news.ycombinator.com/item?id=19455465"" target=""_blank""><small>(ref)</small></a></div>
+
+---
+
+""_If you're looking to learn one **modern framework** for building REST APIs, check out **FastAPI** [...] It's fast, easy to use and easy to learn [...]_""
+
+""_We've switched over to **FastAPI** for our **APIs** [...] I think you'll like it [...]_""
+
+<div style=""text-align: right; margin-right: 10%;"">Ines Montani - Matthew Honnibal - <strong><a href=""https://explosion.ai"" target=""_blank"">Explosion AI</a> founders - <a href=""https://spacy.io"" target=""_blank"">spaCy</a> creators</strong> <a href=""https://twitter.com/_inesmontani/status/1144173225322143744"" target=""_blank""><small>(ref)</small></a> - <a href=""https://twitter.com/honnibal/status/1144031421859655680"" target=""_blank""><small>(ref)</small></a></div>
+
+---
+
+""_If anyone is looking to build a production Python API, I would highly recommend **FastAPI**. It is **beautifully designed**, **simple to use** and **highly scalable**, it has become a **key component** in our API first development strategy and is driving many automations and services such as our Virtual TAC Engineer._""
+
+<div style=""text-align: right; margin-right: 10%;"">Deon Pillsbury - <strong>Cisco</strong> <a href=""https://www.linkedin.com/posts/deonpillsbury_cisco-cx-python-activity-6963242628536487936-trAp/"" target=""_blank""><small>(ref)</small></a></div>
+
+---
+
+## **Typer**, the FastAPI of CLIs
+
+<a href=""https://typer.tiangolo.com"" target=""_blank""><img src=""https://typer.tiangolo.com/img/logo-margin/logo-margin-vector.svg"" style=""width: 20%;""></a>
+
+If you are building a <abbr title=""Command Line Interface"">CLI</abbr> app to be used in the terminal instead of a web API, check out <a href=""https://typer.tiangolo.com/"" class=""external-link"" target=""_blank"">**Typer**</a>.
+
+**Typer** is FastAPI's little sibling. And it's intended to be the **FastAPI of CLIs**. ⌨️ 🚀
+
+## Requirements
+
+FastAPI stands on the shoulders of giants:
+
+* <a href=""https://www.starlette.io/"" class=""external-link"" target=""_blank"">Starlette</a> for the web parts.
+* <a href=""https://docs.pydantic.dev/"" class=""external-link"" target=""_blank"">Pydantic</a> for the data parts.
+
+## Installation
+
+Create and activate a <a href=""https://fastapi.tiangolo.com/virtual-environments/"" class=""external-link"" target=""_blank"">virtual environment</a> and then install FastAPI:
+
+<div class=""termy"">
+
+```console
+$ pip install ""fastapi[standard]""
+
+---> 100%
+```
+
+</div>
+
+**Note**: Make sure you put `""fastapi[standard]""` in quotes to ensure it works in all terminals.
+
+## Example
+
+### Create it
+
+* Create a file `main.py` with:
+
+```Python
+from typing import Union
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+
+@app.get(""/"")
+def read_root():
+    return {""Hello"": ""World""}
+
+
+@app.get(""/items/{item_id}"")
+def read_item(item_id: int, q: Union[str, None] = None):
+    return {""item_id"": item_id, ""q"": q}
+```
+
+<details markdown=""1"">
+<summary>Or use <code>async def</code>...</summary>
+
+If your code uses `async` / `await`, use `async def`:
+
+```Python hl_lines=""9  14""
+from typing import Union
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+
+@app.get(""/"")
+async def read_root():
+    return {""Hello"": ""World""}
+
+
+@app.get(""/items/{item_id}"")
+async def read_item(item_id: int, q: Union[str, None] = None):
+    return {""item_id"": item_id, ""q"": q}
+```
+
+**Note**:
+
+If you don't know, check the _""In a hurry?""_ section about <a href=""https://fastapi.tiangolo.com/async/#in-a-hurry"" target=""_blank"">`async` and `await` in the docs</a>.
+
+</details>
+
+### Run it
+
+Run the server with:
+
+<div class=""termy"">
+
+```console
+$ fastapi dev main.py
+
+ ╭────────── FastAPI CLI - Development mode ───────────╮
+ │                                                     │
+ │  Serving at: http://127.0.0.1:8000                  │
+ │                                                     │
+ │  API docs: http://127.0.0.1:8000/docs               │
+ │                                                     │
+ │  Running in development mode, for production use:   │
+ │                                                     │
+ │  fastapi run                                        │
+ │                                                     │
+ ╰─────────────────────────────────────────────────────╯
+
+INFO:     Will watch for changes in these directories: ['/home/user/code/awesomeapp']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [2248755] using WatchFiles
+INFO:     Started server process [2248757]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+```
+
+</div>
+
+<details markdown=""1"">
+<summary>About the command <code>fastapi dev main.py</code>...</summary>
+
+The command `fastapi dev` reads your `main.py` file, detects the **FastAPI** app in it, and starts a server using <a href=""https://www.uvicorn.org"" class=""external-link"" target=""_blank"">Uvicorn</a>.
+
+By default, `fastapi dev` will start with auto-reload enabled for local development.
+
+You can read more about it in the <a href=""https://fastapi.tiangolo.com/fastapi-cli/"" target=""_blank"">FastAPI CLI docs</a>.
+
+</details>
+
+### Check it
+
+Open your browser at <a href=""http://127.0.0.1:8000/items/5?q=somequery"" class=""external-link"" target=""_blank"">http://127.0.0.1:8000/items/5?q=somequery</a>.
+
+You will see the JSON response as:
+
+```JSON
+{""item_id"": 5, ""q"": ""somequery""}
+```
+
+You already created an API that:
+
+* Receives HTTP requests in the _paths_ `/` and `/items/{item_id}`.
+* Both _paths_ take `GET` <em>operations</em> (also known as HTTP _methods_).
+* The _path_ `/items/{item_id}` has a _path parameter_ `item_id` that should be an `int`.
+* The _path_ `/items/{item_id}` has an optional `str` _query parameter_ `q`.
+
+### Interactive API docs
+
+Now go to <a href=""http://127.0.0.1:8000/docs"" class=""external-link"" target=""_blank"">http://127.0.0.1:8000/docs</a>.
+
+You will see the automatic interactive API documentation (provided by <a href=""https://github.com/swagger-api/swagger-ui"" class=""external-link"" target=""_blank"">Swagger UI</a>):
+
+![Swagger UI](https://fastapi.tiangolo.com/img/index/index-01-swagger-ui-simple.png)
+
+### Alternative API docs
+
+And now, go to <a href=""http://127.0.0.1:8000/redoc"" class=""external-link"" target=""_blank"">http://127.0.0.1:8000/redoc</a>.
+
+You will see the alternative automatic documentation (provided by <a href=""https://github.com/Rebilly/ReDoc"" class=""external-link"" target=""_blank"">ReDoc</a>):
+
+![ReDoc](https://fastapi.tiangolo.com/img/index/index-02-redoc-simple.png)
+
+## Example upgrade
+
+Now modify the file `main.py` to receive a body from a `PUT` request.
+
+Declare the body using standard Python types, thanks to Pydantic.
+
+```Python hl_lines=""4  9-12  25-27""
+from typing import Union
+
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+app = FastAPI()
+
+
+class Item(BaseModel):
+    name: str
+    price: float
+    is_offer: Union[bool, None] = None
+
+
+@app.get(""/"")
+def read_root():
+    return {""Hello"": ""World""}
+
+
+@app.get(""/items/{item_id}"")
+def read_item(item_id: int, q: Union[str, None] = None):
+    return {""item_id"": item_id, ""q"": q}
+
+
+@app.put(""/items/{item_id}"")
+def update_item(item_id: int, item: Item):
+    return {""item_name"": item.name, ""item_id"": item_id}
+```
+
+The `fastapi dev` server should reload automatically.
+
+### Interactive API docs upgrade
+
+Now go to <a href=""http://127.0.0.1:8000/docs"" class=""external-link"" target=""_blank"">http://127.0.0.1:8000/docs</a>.
+
+* The interactive API documentation will be automatically updated, including the new body:
+
+![Swagger UI](https://fastapi.tiangolo.com/img/index/index-03-swagger-02.png)
+
+* Click on the button ""Try it out"", it allows you to fill the parameters and directly interact with the API:
+
+![Swagger UI interaction](https://fastapi.tiangolo.com/img/index/index-04-swagger-03.png)
+
+* Then click on the ""Execute"" button, the user interface will communicate with your API, send the parameters, get the results and show them on the screen:
+
+![Swagger UI interaction](https://fastapi.tiangolo.com/img/index/index-05-swagger-04.png)
+
+### Alternative API docs upgrade
+
+And now, go to <a href=""http://127.0.0.1:8000/redoc"" class=""external-link"" target=""_blank"">http://127.0.0.1:8000/redoc</a>.
+
+* The alternative documentation will also reflect the new query parameter and body:
+
+![ReDoc](https://fastapi.tiangolo.com/img/index/index-06-redoc-02.png)
+
+### Recap
+
+In summary, you declare **once** the types of parameters, body, etc. as function parameters.
+
+You do that with standard modern Python types.
+
+You don't have to learn a new syntax, the methods or classes of a specific library, etc.
+
+Just standard **Python**.
+
+For example, for an `int`:
+
+```Python
+item_id: int
+```
+
+or for a more complex `Item` model:
+
+```Python
+item: Item
+```
+
+...and with that single declaration you get:
+
+* Editor support, including:
+    * Completion.
+    * Type checks.
+* Validation of data:
+    * Automatic and clear errors when the data is invalid.
+    * Validation even for deeply nested JSON objects.
+* <abbr title=""also known as: serialization, parsing, marshalling"">Conversion</abbr> of input data: coming from the network to Python data and types. Reading from:
+    * JSON.
+    * Path parameters.
+    * Query parameters.
+    * Cookies.
+    * Headers.
+    * Forms.
+    * Files.
+* <abbr title=""also known as: serialization, parsing, marshalling"">Conversion</abbr> of output data: converting from Python data and types to network data (as JSON):
+    * Convert Python types (`str`, `int`, `float`, `bool`, `list`, etc).
+    * `datetime` objects.
+    * `UUID` objects.
+    * Database models.
+    * ...and many more.
+* Automatic interactive API documentation, including 2 alternative user interfaces:
+    * Swagger UI.
+    * ReDoc.
+
+---
+
+Coming back to the previous code example, **FastAPI** will:
+
+* Validate that there is an `item_id` in the path for `GET` and `PUT` requests.
+* Validate that the `item_id` is of type `int` for `GET` and `PUT` requests.
+    * If it is not, the client will see a useful, clear error.
+* Check if there is an optional query parameter named `q` (as in `http://127.0.0.1:8000/items/foo?q=somequery`) for `GET` requests.
+    * As the `q` parameter is declared with `= None`, it is optional.
+    * Without the `None` it would be required (as is the body in the case with `PUT`).
+* For `PUT` requests to `/items/{item_id}`, read the body as JSON:
+    * Check that it has a required attribute `name` that should be a `str`.
+    * Check that it has a required attribute `price` that has to be a `float`.
+    * Check that it has an optional attribute `is_offer`, that should be a `bool`, if present.
+    * All this would also work for deeply nested JSON objects.
+* Convert from and to JSON automatically.
+* Document everything with OpenAPI, that can be used by:
+    * Interactive documentation systems.
+    * Automatic client code generation systems, for many languages.
+* Provide 2 interactive documentation web interfaces directly.
+
+---
+
+We just scratched the surface, but you already get the idea of how it all works.
+
+Try changing the line with:
+
+```Python
+    return {""item_name"": item.name, ""item_id"": item_id}
+```
+
+...from:
+
+```Python
+        ... ""item_name"": item.name ...
+```
+
+...to:
+
+```Python
+        ... ""item_price"": item.price ...
+```
+
+...and see how your editor will auto-complete the attributes and know their types:
+
+![editor support](https://fastapi.tiangolo.com/img/vscode-completion.png)
+
+For a more complete example including more features, see the <a href=""https://fastapi.tiangolo.com/tutorial/"">Tutorial - User Guide</a>.
+
+**Spoiler alert**: the tutorial - user guide includes:
+
+* Declaration of **parameters** from other different places as: **headers**, **cookies**, **form fields** and **files**.
+* How to set **validation constraints** as `maximum_length` or `regex`.
+* A very powerful and easy to use **<abbr title=""also known as components, resources, providers, services, injectables"">Dependency Injection</abbr>** system.
+* Security and authentication, including support for **OAuth2** with **JWT tokens** and **HTTP Basic** auth.
+* More advanced (but equally easy) techniques for declaring **deeply nested JSON models** (thanks to Pydantic).
+* **GraphQL** integration with <a href=""https://strawberry.rocks"" class=""external-link"" target=""_blank"">Strawberry</a> and other libraries.
+* Many extra features (thanks to Starlette) as:
+    * **WebSockets**
+    * extremely easy tests based on HTTPX and `pytest`
+    * **CORS**
+    * **Cookie Sessions**
+    * ...and more.
+
+## Performance
+
+Independent TechEmpower benchmarks show **FastAPI** applications running under Uvicorn as <a href=""https://www.techempower.com/benchmarks/#section=test&runid=7464e520-0dc2-473d-bd34-dbdfd7e85911&hw=ph&test=query&l=zijzen-7"" class=""external-link"" target=""_blank"">one of the fastest Python frameworks available</a>, only below Starlette and Uvicorn themselves (used internally by FastAPI). (*)
+
+To understand more about it, see the section <a href=""https://fastapi.tiangolo.com/benchmarks/"" class=""internal-link"" target=""_blank"">Benchmarks</a>.
+
+## Dependencies
+
+FastAPI depends on Pydantic and Starlette.
+
+### `standard` Dependencies
+
+When you install FastAPI with `pip install ""fastapi[standard]""` it comes with the `standard` group of optional dependencies:
+
+Used by Pydantic:
+
+* <a href=""https://github.com/JoshData/python-email-validator"" target=""_blank""><code>email-validator</code></a> - for email validation.
+
+Used by Starlette:
+
+* <a href=""https://www.python-httpx.org"" target=""_blank""><code>httpx</code></a> - Required if you want to use the `TestClient`.
+* <a href=""https://jinja.palletsprojects.com"" target=""_blank""><code>jinja2</code></a> - Required if you want to use the default template configuration.
+* <a href=""https://github.com/Kludex/python-multipart"" target=""_blank""><code>python-multipart</code></a> - Required if you want to support form <abbr title=""converting the string that comes from an HTTP request into Python data"">""parsing""</abbr>, with `request.form()`.
+
+Used by FastAPI / Starlette:
+
+* <a href=""https://www.uvicorn.org"" target=""_blank""><code>uvicorn</code></a> - for the server that loads and serves your application. This includes `uvicorn[standard]`, which includes some dependencies (e.g. `uvloop`) needed for high performance serving.
+* `fastapi-cli` - to provide the `fastapi` command.
+
+### Without `standard` Dependencies
+
+If you don't want to include the `standard` optional dependencies, you can install with `pip install fastapi` instead of `pip install ""fastapi[standard]""`.
+
+### Additional Optional Dependencies
+
+There are some additional dependencies you might want to install.
+
+Additional optional Pydantic dependencies:
+
+* <a href=""https://docs.pydantic.dev/latest/usage/pydantic_settings/"" target=""_blank""><code>pydantic-settings</code></a> - for settings management.
+* <a href=""https://docs.pydantic.dev/latest/usage/types/extra_types/extra_types/"" target=""_blank""><code>pydantic-extra-types</code></a> - for extra types to be used with Pydantic.
+
+Additional optional FastAPI dependencies:
+
+* <a href=""https://github.com/ijl/orjson"" target=""_blank""><code>orjson</code></a> - Required if you want to use `ORJSONResponse`.
+* <a href=""https://github.com/esnme/ultrajson"" target=""_blank""><code>ujson</code></a> - Required if you want to use `UJSONResponse`.
+
+## License
+
+This project is licensed under the terms of the MIT license.
+",MIT,Apache-2.0,Pip,https://pypi.org/project/fastapi/,fastapi,
+gunicorn,23.0.0,Benoit Chesneau <benoitc@gunicorn.org>,"Gunicorn
+--------
+
+.. image:: https://img.shields.io/pypi/v/gunicorn.svg?style=flat
+    :alt: PyPI version
+    :target: https://pypi.python.org/pypi/gunicorn
+
+.. image:: https://img.shields.io/pypi/pyversions/gunicorn.svg
+    :alt: Supported Python versions
+    :target: https://pypi.python.org/pypi/gunicorn
+
+.. image:: https://github.com/benoitc/gunicorn/actions/workflows/tox.yml/badge.svg
+    :alt: Build Status
+    :target: https://github.com/benoitc/gunicorn/actions/workflows/tox.yml
+
+.. image:: https://github.com/benoitc/gunicorn/actions/workflows/lint.yml/badge.svg
+    :alt: Lint Status
+    :target: https://github.com/benoitc/gunicorn/actions/workflows/lint.yml
+
+Gunicorn 'Green Unicorn' is a Python WSGI HTTP Server for UNIX. It's a pre-fork
+worker model ported from Ruby's Unicorn_ project. The Gunicorn server is broadly
+compatible with various web frameworks, simply implemented, light on server
+resource usage, and fairly speedy.
+
+Feel free to join us in `#gunicorn`_ on `Libera.chat`_.
+
+Documentation
+-------------
+
+The documentation is hosted at https://docs.gunicorn.org.
+
+Installation
+------------
+
+Gunicorn requires **Python 3.x >= 3.7**.
+
+Install from PyPI::
+
+    $ pip install gunicorn
+
+
+Usage
+-----
+
+Basic usage::
+
+    $ gunicorn [OPTIONS] APP_MODULE
+
+Where ``APP_MODULE`` is of the pattern ``$(MODULE_NAME):$(VARIABLE_NAME)``. The
+module name can be a full dotted path. The variable name refers to a WSGI
+callable that should be found in the specified module.
+
+Example with test app::
+
+    $ cd examples
+    $ gunicorn --workers=2 test:app
+
+
+Contributing
+------------
+
+See `our complete contributor's guide <CONTRIBUTING.md>`_ for more details.
+
+
+License
+-------
+
+Gunicorn is released under the MIT License. See the LICENSE_ file for more
+details.
+
+.. _Unicorn: https://bogomips.org/unicorn/
+.. _`#gunicorn`: https://web.libera.chat/?channels=#gunicorn
+.. _`Libera.chat`: https://libera.chat/
+.. _LICENSE: https://github.com/benoitc/gunicorn/blob/master/LICENSE
+",MIT,HPND,Pip,https://pypi.org/project/gunicorn/,gunicorn,
+httpx,0.27.2,Tom Christie <tom@tomchristie.com>,"<p align=""center"">
+  <a href=""https://www.python-httpx.org/""><img width=""350"" height=""208"" src=""https://raw.githubusercontent.com/encode/httpx/master/docs/img/butterfly.png"" alt='HTTPX'></a>
+</p>
+
+<p align=""center""><strong>HTTPX</strong> <em>- A next-generation HTTP client for Python.</em></p>
+
+<p align=""center"">
+<a href=""https://github.com/encode/httpx/actions"">
+    <img src=""https://github.com/encode/httpx/workflows/Test%20Suite/badge.svg"" alt=""Test Suite"">
+</a>
+<a href=""https://pypi.org/project/httpx/"">
+    <img src=""https://badge.fury.io/py/httpx.svg"" alt=""Package version"">
+</a>
+</p>
+
+HTTPX is a fully featured HTTP client library for Python 3. It includes **an integrated command line client**, has support for both **HTTP/1.1 and HTTP/2**, and provides both **sync and async APIs**.
+
+---
+
+Install HTTPX using pip:
+
+```shell
+$ pip install httpx
+```
+
+Now, let's get started:
+
+```pycon
+>>> import httpx
+>>> r = httpx.get('https://www.example.org/')
+>>> r
+<Response [200 OK]>
+>>> r.status_code
+200
+>>> r.headers['content-type']
+'text/html; charset=UTF-8'
+>>> r.text
+'<!doctype html>\n<html>\n<head>\n<title>Example Domain</title>...'
+```
+
+Or, using the command-line client.
+
+```shell
+$ pip install 'httpx[cli]'  # The command line client is an optional dependency.
+```
+
+Which now allows us to use HTTPX directly from the command-line...
+
+<p align=""center"">
+  <img width=""700"" src=""https://raw.githubusercontent.com/encode/httpx/master/docs/img/httpx-help.png"" alt='httpx --help'>
+</p>
+
+Sending a request...
+
+<p align=""center"">
+  <img width=""700"" src=""https://raw.githubusercontent.com/encode/httpx/master/docs/img/httpx-request.png"" alt='httpx http://httpbin.org/json'>
+</p>
+
+## Features
+
+HTTPX builds on the well-established usability of `requests`, and gives you:
+
+* A broadly [requests-compatible API](https://www.python-httpx.org/compatibility/).
+* An integrated command-line client.
+* HTTP/1.1 [and HTTP/2 support](https://www.python-httpx.org/http2/).
+* Standard synchronous interface, but with [async support if you need it](https://www.python-httpx.org/async/).
+* Ability to make requests directly to [WSGI applications](https://www.python-httpx.org/advanced/transports/#wsgi-transport) or [ASGI applications](https://www.python-httpx.org/advanced/transports/#asgi-transport).
+* Strict timeouts everywhere.
+* Fully type annotated.
+* 100% test coverage.
+
+Plus all the standard features of `requests`...
+
+* International Domains and URLs
+* Keep-Alive & Connection Pooling
+* Sessions with Cookie Persistence
+* Browser-style SSL Verification
+* Basic/Digest Authentication
+* Elegant Key/Value Cookies
+* Automatic Decompression
+* Automatic Content Decoding
+* Unicode Response Bodies
+* Multipart File Uploads
+* HTTP(S) Proxy Support
+* Connection Timeouts
+* Streaming Downloads
+* .netrc Support
+* Chunked Requests
+
+## Installation
+
+Install with pip:
+
+```shell
+$ pip install httpx
+```
+
+Or, to include the optional HTTP/2 support, use:
+
+```shell
+$ pip install httpx[http2]
+```
+
+HTTPX requires Python 3.8+.
+
+## Documentation
+
+Project documentation is available at [https://www.python-httpx.org/](https://www.python-httpx.org/).
+
+For a run-through of all the basics, head over to the [QuickStart](https://www.python-httpx.org/quickstart/).
+
+For more advanced topics, see the [Advanced Usage](https://www.python-httpx.org/advanced/) section, the [async support](https://www.python-httpx.org/async/) section, or the [HTTP/2](https://www.python-httpx.org/http2/) section.
+
+The [Developer Interface](https://www.python-httpx.org/api/) provides a comprehensive API reference.
+
+To find out about tools that integrate with HTTPX, see [Third Party Packages](https://www.python-httpx.org/third_party_packages/).
+
+## Contribute
+
+If you want to contribute with HTTPX check out the [Contributing Guide](https://www.python-httpx.org/contributing/) to learn how to start.
+
+## Dependencies
+
+The HTTPX project relies on these excellent libraries:
+
+* `httpcore` - The underlying transport implementation for `httpx`.
+  * `h11` - HTTP/1.1 support.
+* `certifi` - SSL certificates.
+* `idna` - Internationalized domain name support.
+* `sniffio` - Async library autodetection.
+
+As well as these optional installs:
+
+* `h2` - HTTP/2 support. *(Optional, with `httpx[http2]`)*
+* `socksio` - SOCKS proxy support. *(Optional, with `httpx[socks]`)*
+* `rich` - Rich terminal support. *(Optional, with `httpx[cli]`)*
+* `click` - Command line client support. *(Optional, with `httpx[cli]`)*
+* `brotli` or `brotlicffi` - Decoding for ""brotli"" compressed responses. *(Optional, with `httpx[brotli]`)*
+* `zstandard` - Decoding for ""zstd"" compressed responses. *(Optional, with `httpx[zstd]`)*
+
+A huge amount of credit is due to `requests` for the API layout that
+much of this work follows, as well as to `urllib3` for plenty of design
+inspiration around the lower-level networking details.
+
+---
+
+<p align=""center""><i>HTTPX is <a href=""https://github.com/encode/httpx/blob/master/LICENSE.md"">BSD licensed</a> code.<br/>Designed & crafted with care.</i><br/>&mdash; 🦋 &mdash;</p>
+
+## Release Information
+
+### Fixed
+
+* Reintroduced supposedly-private `URLTypes` shortcut. (#2673)
+
+
+---
+
+[Full changelog](https://github.com/encode/httpx/blob/master/CHANGELOG.md)
+",,BSD-3-Clause,Pip,https://pypi.org/project/httpx/,httpx,
+jinja2,3.1.4,,,,BSD-3-Clause,Pip,,jinja2,
+matrix-nio,0.25.1,"Damir Jelić <poljar@termina.org.uk>, Paarth Shah <mail@shahpaarth.com>","nio
+===
+
+[![Build Status](https://img.shields.io/github/actions/workflow/status/matrix-nio/matrix-nio/tests.yml?branch=main&style=flat-square)](https://github.com/matrix-nio/matrix-nio/actions)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/matrix-nio?style=flat-square)](https://pypi.org/project/matrix-nio/)
+[![codecov](https://img.shields.io/codecov/c/github/matrix-nio/matrix-nio/master.svg?style=flat-square)](https://codecov.io/gh/matrix-nio/matrix-nio)
+[![license](https://img.shields.io/badge/license-ISC-blue.svg?style=flat-square)](https://github.com/matrix-nio/matrix-nio/blob/master/LICENSE.md)
+[![Documentation Status](https://readthedocs.org/projects/matrix-nio/badge/?version=latest&style=flat-square)](https://matrix-nio.readthedocs.io/en/latest/?badge=latest)
+[![#nio](https://img.shields.io/badge/matrix-%23nio:matrix.org-blue.svg?style=flat-square)](https://matrix.to/#/!JiiOHXrIUCtcOJsZCa:matrix.org?via=matrix.org&via=maunium.net&via=t2l.io)
+
+nio is a multilayered [Matrix](https://matrix.org/) client library. The
+underlying base layer doesn't do any network IO on its own, but on top of that
+is a full-fledged batteries-included asyncio layer using
+[aiohttp](https://github.com/aio-libs/aiohttp/). File IO is only done if you
+enable end-to-end encryption (E2EE).
+
+Documentation
+-------------
+
+The full API documentation for nio can be found at
+[https://matrix-nio.readthedocs.io](https://matrix-nio.readthedocs.io/en/latest/#api-documentation)
+
+Features
+--------
+
+nio has most of the features you'd expect in a Matrix library, but it's still a work in progress.
+
+- ✅ transparent end-to-end encryption (EE2E)
+- ✅ encrypted file uploads & downloads
+- ✅ space parents/children
+- ✅ manual and emoji verification
+- ✅ custom [authentication types](https://matrix.org/docs/spec/client_server/r0.6.0#id183)
+- ✅ threading support
+- ✅ well-integrated type system
+- ✅ knocking, kick, ban and unban
+- ✅ typing notifications
+- ✅ message redaction
+- ✅ token based login
+- ✅ user registration
+- ✅ read receipts
+- ✅ live syncing
+- ✅ `m.reaction`s
+- ✅ `m.tag`s
+- ❌ cross-signing support
+- ❌ server-side key backups (room key backup, ""Secure Backup"")
+- ❌ user deactivation ([#112](https://github.com/matrix-nio/matrix-nio/issues/112))
+- ❌ in-room emoji verification
+
+Installation
+------------
+
+To install nio, simply use pip:
+
+```bash
+$ pip install matrix-nio
+```
+
+Note that this installs nio without end-to-end encryption support. For e2ee
+support, python-olm is needed which requires the
+[libolm](https://gitlab.matrix.org/matrix-org/olm) C library (version 3.x).
+On Debian and Ubuntu one can use `apt-get` to install package `libolm-dev`.
+On Fedora one can use `dnf` to install package `libolm-devel`.
+On MacOS one can use [brew](https://brew.sh/) to install package `libolm`.
+Make sure version 3 is installed.
+
+After libolm has been installed, the e2ee enabled version of nio can be
+installed using pip:
+
+```bash
+$ pip install matrix-nio[e2e]
+```
+
+Additionally, a docker image with the e2ee enabled version of nio is provided in
+the `docker/` directory.
+
+Examples
+--------
+
+For examples of how to use nio, and how others are using it,
+[read the docs](https://matrix-nio.readthedocs.io/en/latest/examples.html)
+",ISC,Apache-2.0,Pip,https://pypi.org/project/matrix-nio/,matrix-nio,
+matrix-nio,0.25.2,"Damir Jelić <poljar@termina.org.uk>, Paarth Shah <mail@shahpaarth.com>","nio
+===
+
+[![Build Status](https://img.shields.io/github/actions/workflow/status/matrix-nio/matrix-nio/tests.yml?branch=main&style=flat-square)](https://github.com/matrix-nio/matrix-nio/actions)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/matrix-nio?style=flat-square)](https://pypi.org/project/matrix-nio/)
+[![codecov](https://img.shields.io/codecov/c/github/matrix-nio/matrix-nio/master.svg?style=flat-square)](https://codecov.io/gh/matrix-nio/matrix-nio)
+[![license](https://img.shields.io/badge/license-ISC-blue.svg?style=flat-square)](https://github.com/matrix-nio/matrix-nio/blob/master/LICENSE.md)
+[![Documentation Status](https://readthedocs.org/projects/matrix-nio/badge/?version=latest&style=flat-square)](https://matrix-nio.readthedocs.io/en/latest/?badge=latest)
+[![#nio](https://img.shields.io/badge/matrix-%23nio:matrix.org-blue.svg?style=flat-square)](https://matrix.to/#/!JiiOHXrIUCtcOJsZCa:matrix.org?via=matrix.org&via=maunium.net&via=t2l.io)
+
+nio is a multilayered [Matrix](https://matrix.org/) client library. The
+underlying base layer doesn't do any network IO on its own, but on top of that
+is a full-fledged batteries-included asyncio layer using
+[aiohttp](https://github.com/aio-libs/aiohttp/). File IO is only done if you
+enable end-to-end encryption (E2EE).
+
+Documentation
+-------------
+
+The full API documentation for nio can be found at
+[https://matrix-nio.readthedocs.io](https://matrix-nio.readthedocs.io/en/latest/#api-documentation)
+
+Features
+--------
+
+nio has most of the features you'd expect in a Matrix library, but it's still a work in progress.
+
+- ✅ transparent end-to-end encryption (EE2E)
+- ✅ encrypted file uploads & downloads
+- ✅ space parents/children
+- ✅ manual and emoji verification
+- ✅ custom [authentication types](https://matrix.org/docs/spec/client_server/r0.6.0#id183)
+- ✅ threading support
+- ✅ well-integrated type system
+- ✅ knocking, kick, ban and unban
+- ✅ typing notifications
+- ✅ message redaction
+- ✅ token based login
+- ✅ user registration
+- ✅ read receipts
+- ✅ live syncing
+- ✅ `m.reaction`s
+- ✅ `m.tag`s
+- ❌ cross-signing support
+- ❌ server-side key backups (room key backup, ""Secure Backup"")
+- ❌ user deactivation ([#112](https://github.com/matrix-nio/matrix-nio/issues/112))
+- ❌ in-room emoji verification
+
+Installation
+------------
+
+To install nio, simply use pip:
+
+```bash
+$ pip install matrix-nio
+```
+
+Note that this installs nio without end-to-end encryption support. For e2ee
+support, python-olm is needed which requires the
+[libolm](https://gitlab.matrix.org/matrix-org/olm) C library (version 3.x).
+On Debian and Ubuntu one can use `apt-get` to install package `libolm-dev`.
+On Fedora one can use `dnf` to install package `libolm-devel`.
+On MacOS one can use [brew](https://brew.sh/) to install package `libolm`.
+Make sure version 3 is installed.
+
+After libolm has been installed, the e2ee enabled version of nio can be
+installed using pip:
+
+```bash
+$ pip install matrix-nio[e2e]
+```
+
+Additionally, a docker image with the e2ee enabled version of nio is provided in
+the `docker/` directory.
+
+Examples
+--------
+
+For examples of how to use nio, and how others are using it,
+[read the docs](https://matrix-nio.readthedocs.io/en/latest/examples.html)
+",ISC,Apache-2.0,Pip,https://pypi.org/project/matrix-nio/,matrix-nio,
+playwright,1.46.0,,"# 🎭 [Playwright](https://playwright.dev) for Python [![PyPI version](https://badge.fury.io/py/playwright.svg)](https://pypi.python.org/pypi/playwright/) [![Anaconda version](https://img.shields.io/conda/v/microsoft/playwright)](https://anaconda.org/Microsoft/playwright) [![Join Discord](https://img.shields.io/badge/join-discord-infomational)](https://aka.ms/playwright/discord)
+
+Playwright is a Python library to automate [Chromium](https://www.chromium.org/Home), [Firefox](https://www.mozilla.org/en-US/firefox/new/) and [WebKit](https://webkit.org/) browsers with a single API. Playwright delivers automation that is **ever-green**, **capable**, **reliable** and **fast**. [See how Playwright is better](https://playwright.dev/python).
+
+|          | Linux | macOS | Windows |
+|   :---   | :---: | :---: | :---:   |
+| Chromium <!-- GEN:chromium-version -->133.0.6943.16<!-- GEN:stop --> | ✅ | ✅ | ✅ |
+| WebKit <!-- GEN:webkit-version -->18.2<!-- GEN:stop --> | ✅ | ✅ | ✅ |
+| Firefox <!-- GEN:firefox-version -->134.0<!-- GEN:stop --> | ✅ | ✅ | ✅ |
+
+## Documentation
+
+[https://playwright.dev/python/docs/intro](https://playwright.dev/python/docs/intro)
+
+## API Reference
+
+[https://playwright.dev/python/docs/api/class-playwright](https://playwright.dev/python/docs/api/class-playwright)
+
+## Example
+
+```py
+from playwright.sync_api import sync_playwright
+
+with sync_playwright() as p:
+    for browser_type in [p.chromium, p.firefox, p.webkit]:
+        browser = browser_type.launch()
+        page = browser.new_page()
+        page.goto('http://playwright.dev')
+        page.screenshot(path=f'example-{browser_type.name}.png')
+        browser.close()
+```
+
+```py
+import asyncio
+from playwright.async_api import async_playwright
+
+async def main():
+    async with async_playwright() as p:
+        for browser_type in [p.chromium, p.firefox, p.webkit]:
+            browser = await browser_type.launch()
+            page = await browser.new_page()
+            await page.goto('http://playwright.dev')
+            await page.screenshot(path=f'example-{browser_type.name}.png')
+            await browser.close()
+
+asyncio.run(main())
+```
+
+## Other languages
+
+More comfortable in another programming language? [Playwright](https://playwright.dev) is also available in
+- [Node.js (JavaScript / TypeScript)](https://playwright.dev/docs/intro),
+- [.NET](https://playwright.dev/dotnet/docs/intro),
+- [Java](https://playwright.dev/java/docs/intro).
+",Apache-2.0,Artistic-2.0; BSD-2-Clause; BSD-3-Clause; CC0-1.0; GPL-2.0-with-autoconf-exception; gpl-3.0-plus WITH autoconf-simple-exception; ICU; ISC; MIT; mit-addition; mit-old-style-no-advert; naist-2003; public-domain; Zlib,Pip,https://pypi.org/project/playwright/,playwright,
+pydantic,2.9.1,"Samuel Colvin <s@muelcolvin.com>, Eric Jolibois <em.jolibois@gmail.com>, Hasan Ramezani <hasan.r67@gmail.com>, Adrian Garcia Badaracco <1755071+adriangb@users.noreply.github.com>, Terrence Dorsey <terry@pydantic.dev>, David Montague <david@pydantic.dev>, Serge Matveenko <lig@countzero.co>, Marcelo Trylesinski <marcelotryle@gmail.com>, Sydney Runkle <sydneymarierunkle@gmail.com>, David Hewitt <mail@davidhewitt.io>, Alex Hall <alex.mojaki@gmail.com>, Victorien Plot <contact@vctrn.dev>","# Pydantic
+[![CI](https://img.shields.io/github/actions/workflow/status/pydantic/pydantic/ci.yml?branch=main&logo=github&label=CI)](https://github.com/pydantic/pydantic/actions?query=event%3Apush+branch%3Amain+workflow%3ACI)
+[![Coverage](https://coverage-badge.samuelcolvin.workers.dev/pydantic/pydantic.svg)](https://coverage-badge.samuelcolvin.workers.dev/redirect/pydantic/pydantic)
+[![pypi](https://img.shields.io/pypi/v/pydantic.svg)](https://pypi.python.org/pypi/pydantic)
+[![CondaForge](https://img.shields.io/conda/v/conda-forge/pydantic.svg)](https://anaconda.org/conda-forge/pydantic)
+[![downloads](https://static.pepy.tech/badge/pydantic/month)](https://pepy.tech/project/pydantic)
+[![versions](https://img.shields.io/pypi/pyversions/pydantic.svg)](https://github.com/pydantic/pydantic)
+[![license](https://img.shields.io/github/license/pydantic/pydantic.svg)](https://github.com/pydantic/pydantic/blob/main/LICENSE)
+[![Pydantic v2](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/pydantic/pydantic/main/docs/badge/v2.json)](https://docs.pydantic.dev/latest/contributing/#badges)
+
+Data validation using Python type hints.
+
+Fast and extensible, Pydantic plays nicely with your linters/IDE/brain.
+Define how data should be in pure, canonical Python 3.8+; validate it with Pydantic.
+
+## Pydantic Logfire :fire:
+
+We've recently launched Pydantic Logfire to help you monitor your applications.
+[Learn more](https://pydantic.dev/articles/logfire-announcement)
+
+## Pydantic V1.10 vs. V2
+
+Pydantic V2 is a ground-up rewrite that offers many new features, performance improvements, and some breaking changes compared to Pydantic V1.
+
+If you're using Pydantic V1 you may want to look at the
+[pydantic V1.10 Documentation](https://docs.pydantic.dev/) or,
+[`1.10.X-fixes` git branch](https://github.com/pydantic/pydantic/tree/1.10.X-fixes). Pydantic V2 also ships with the latest version of Pydantic V1 built in so that you can incrementally upgrade your code base and projects: `from pydantic import v1 as pydantic_v1`.
+
+## Help
+
+See [documentation](https://docs.pydantic.dev/) for more details.
+
+## Installation
+
+Install using `pip install -U pydantic` or `conda install pydantic -c conda-forge`.
+For more installation options to make Pydantic even faster,
+see the [Install](https://docs.pydantic.dev/install/) section in the documentation.
+
+## A Simple Example
+
+```python
+from datetime import datetime
+from typing import List, Optional
+from pydantic import BaseModel
+
+class User(BaseModel):
+    id: int
+    name: str = 'John Doe'
+    signup_ts: Optional[datetime] = None
+    friends: List[int] = []
+
+external_data = {'id': '123', 'signup_ts': '2017-06-01 12:22', 'friends': [1, '2', b'3']}
+user = User(**external_data)
+print(user)
+#> User id=123 name='John Doe' signup_ts=datetime.datetime(2017, 6, 1, 12, 22) friends=[1, 2, 3]
+print(user.id)
+#> 123
+```
+
+## Contributing
+
+For guidance on setting up a development environment and how to make a
+contribution to Pydantic, see
+[Contributing to Pydantic](https://docs.pydantic.dev/contributing/).
+
+## Reporting a Security Vulnerability
+
+See our [security policy](https://github.com/pydantic/pydantic/security/policy).
+
+## Changelog
+
+## v2.10.6 (2025-01-23)
+
+[GitHub release](https://github.com/pydantic/pydantic/releases/tag/v2.10.6)
+
+### What's Changed
+
+#### Fixes
+
+* Fix JSON Schema reference collection with `'examples'` keys by [@Viicos](https://github.com/Viicos) in [#11325](https://github.com/pydantic/pydantic/pull/11325)
+* Fix url python serialization by [@sydney-runkle](https://github.com/sydney-runkle) in [#11331](https://github.com/pydantic/pydantic/pull/11331)
+
+
+## v2.10.5 (2025-01-08)
+
+[GitHub release](https://github.com/pydantic/pydantic/releases/tag/v2.10.5)
+
+### What's Changed
+
+#### Fixes
+
+* Remove custom MRO implementation of Pydantic models by [@Viicos](https://github.com/Viicos) in [#11184](https://github.com/pydantic/pydantic/pull/11184)
+* Fix URL serialization for unions by [@sydney-runkle](https://github.com/sydney-runkle) in [#11233](https://github.com/pydantic/pydantic/pull/11233)
+
+## v2.10.4 (2024-12-18)
+
+[GitHub release](https://github.com/pydantic/pydantic/releases/tag/v2.10.4)
+
+### What's Changed
+
+#### Packaging
+
+* Bump `pydantic-core` to v2.27.2 by [@davidhewitt](https://github.com/davidhewitt) in [#11138](https://github.com/pydantic/pydantic/pull/11138)
+
+#### Fixes
+
+* Fix for comparison of `AnyUrl` objects by [@alexprabhat99](https://github.com/alexprabhat99) in [#11082](https://github.com/pydantic/pydantic/pull/11082)
+* Properly fetch PEP 695 type params for functions, do not fetch annotations from signature by [@Viicos](https://github.com/Viicos) in [#11093](https://github.com/pydantic/pydantic/pull/11093)
+* Include JSON Schema input core schema in function schemas by [@Viicos](https://github.com/Viicos) in [#11085](https://github.com/pydantic/pydantic/pull/11085)
+* Add `len` to `_BaseUrl` to avoid TypeError by [@Kharianne](https://github.com/Kharianne) in [#11111](https://github.com/pydantic/pydantic/pull/11111)
+* Make sure the type reference is removed from the seen references by [@Viicos](https://github.com/Viicos) in [#11143](https://github.com/pydantic/pydantic/pull/11143)
+
+### New Contributors
+
+* [@alexprabhat99](https://github.com/alexprabhat99) made their first contribution in [#11082](https://github.com/pydantic/pydantic/pull/11082)
+* [@Kharianne](https://github.com/Kharianne) made their first contribution in [#11111](https://github.com/pydantic/pydantic/pull/11111)
+
+## v2.10.3 (2024-12-03)
+
+[GitHub release](https://github.com/pydantic/pydantic/releases/tag/v2.10.3)
+
+### What's Changed
+
+#### Fixes
+
+* Set fields when `defer_build` is set on Pydantic dataclasses by [@Viicos](https://github.com/Viicos) in [#10984](https://github.com/pydantic/pydantic/pull/10984)
+* Do not resolve the JSON Schema reference for `dict` core schema keys by [@Viicos](https://github.com/Viicos) in [#10989](https://github.com/pydantic/pydantic/pull/10989)
+* Use the globals of the function when evaluating the return type for `PlainSerializer` and `WrapSerializer` functions by [@Viicos](https://github.com/Viicos) in [#11008](https://github.com/pydantic/pydantic/pull/11008)
+* Fix host required enforcement for urls to be compatible with v2.9 behavior by [@sydney-runkle](https://github.com/sydney-runkle) in [#11027](https://github.com/pydantic/pydantic/pull/11027)
+* Add a `default_factory_takes_validated_data` property to `FieldInfo` by [@Viicos](https://github.com/Viicos) in [#11034](https://github.com/pydantic/pydantic/pull/11034)
+* Fix url json schema in `serialization` mode by [@sydney-runkle](https://github.com/sydney-runkle) in [#11035](https://github.com/pydantic/pydantic/pull/11035)
+
+## v2.10.2 (2024-11-25)
+
+[GitHub release](https://github.com/pydantic/pydantic/releases/tag/v2.10.2)
+
+### What's Changed
+
+#### Fixes
+
+* Only evaluate FieldInfo annotations if required during schema building by [@Viicos](https://github.com/Viicos) in [#10769](https://github.com/pydantic/pydantic/pull/10769)
+* Do not evaluate annotations for private fields by [@Viicos](https://github.com/Viicos) in [#10962](https://github.com/pydantic/pydantic/pull/10962)
+* Support serialization as any for `Secret` types and `Url` types by [@sydney-runkle](https://github.com/sydney-runkle) in [#10947](https://github.com/pydantic/pydantic/pull/10947)
+* Fix type hint of `Field.default` to be compatible with Python 3.8 and 3.9 by [@Viicos](https://github.com/Viicos) in [#10972](https://github.com/pydantic/pydantic/pull/10972)
+* Add hashing support for URL types by [@sydney-runkle](https://github.com/sydney-runkle) in [#10975](https://github.com/pydantic/pydantic/pull/10975)
+* Hide `BaseModel.__replace__` definition from type checkers by [@Viicos](https://github.com/Viicos) in [10979](https://github.com/pydantic/pydantic/pull/10979)
+
+## v2.10.1 (2024-11-21)
+
+[GitHub release](https://github.com/pydantic/pydantic/releases/tag/v2.10.1)
+
+### What's Changed
+
+#### Packaging
+
+* Bump `pydantic-core` version to `v2.27.1` by [@sydney-runkle](https://github.com/sydney-runkle) in [#10938](https://github.com/pydantic/pydantic/pull/10938)
+
+#### Fixes
+
+* Use the correct frame when instantiating a parametrized `TypeAdapter` by [@Viicos](https://github.com/Viicos) in [#10893](https://github.com/pydantic/pydantic/pull/10893)
+* Relax check for validated data in `default_factory` utils by [@sydney-runkle](https://github.com/sydney-runkle) in [#10909](https://github.com/pydantic/pydantic/pull/10909)
+* Fix type checking issue with `model_fields` and `model_computed_fields` by [@sydney-runkle](https://github.com/sydney-runkle) in [#10911](https://github.com/pydantic/pydantic/pull/10911)
+* Use the parent configuration during schema generation for stdlib `dataclass`es by [@sydney-runkle](https://github.com/sydney-runkle) in [#10928](https://github.com/pydantic/pydantic/pull/10928)
+* Use the `globals` of the function when evaluating the return type of serializers and `computed_field`s by [@Viicos](https://github.com/Viicos) in [#10929](https://github.com/pydantic/pydantic/pull/10929)
+* Fix URL constraint application by [@sydney-runkle](https://github.com/sydney-runkle) in [#10922](https://github.com/pydantic/pydantic/pull/10922)
+* Fix URL equality with different validation methods by [@sydney-runkle](https://github.com/sydney-runkle) in [#10934](https://github.com/pydantic/pydantic/pull/10934)
+* Fix JSON schema title when specified as `''` by [@sydney-runkle](https://github.com/sydney-runkle) in [#10936](https://github.com/pydantic/pydantic/pull/10936)
+* Fix `python` mode serialization for `complex` inference by [@sydney-runkle](https://github.com/sydney-runkle) in [pydantic-core#1549](https://github.com/pydantic/pydantic-core/pull/1549)
+
+## v2.10.0 (2024-11-20)
+
+The code released in v2.10.0 is practically identical to that of v2.10.0b2.
+
+[GitHub release](https://github.com/pydantic/pydantic/releases/tag/v2.10.0)
+
+See the [v2.10 release blog post](https://pydantic.dev/articles/pydantic-v2-10-release) for the highlights!
+
+### What's Changed
+
+#### Packaging
+
+* Bump `pydantic-core` to `v2.27.0` by [@sydney-runkle](https://github.com/sydney-runkle) in [#10825](https://github.com/pydantic/pydantic/pull/10825)
+* Replaced pdm with uv by [@frfahim](https://github.com/frfahim) in [#10727](https://github.com/pydantic/pydantic/pull/10727)
+
+#### New Features
+
+* Support `fractions.Fraction` by [@sydney-runkle](https://github.com/sydney-runkle) in [#10318](https://github.com/pydantic/pydantic/pull/10318)
+* Support `Hashable` for json validation by [@sydney-runkle](https://github.com/sydney-runkle) in [#10324](https://github.com/pydantic/pydantic/pull/10324)
+* Add a `SocketPath` type for `linux` systems by [@theunkn0wn1](https://github.com/theunkn0wn1) in [#10378](https://github.com/pydantic/pydantic/pull/10378)
+* Allow arbitrary refs in JSON schema `examples` by [@sydney-runkle](https://github.com/sydney-runkle) in [#10417](https://github.com/pydantic/pydantic/pull/10417)
+* Support `defer_build` for Pydantic dataclasses by [@Viicos](https://github.com/Viicos) in [#10313](https://github.com/pydantic/pydantic/pull/10313)
+* Adding v1 / v2 incompatibility warning for nested v1 model by [@sydney-runkle](https://github.com/sydney-runkle) in [#10431](https://github.com/pydantic/pydantic/pull/10431)
+* Add support for unpacked `TypedDict` to type hint variadic keyword arguments with `@validate_call` by [@Viicos](https://github.com/Viicos) in [#10416](https://github.com/pydantic/pydantic/pull/10416)
+* Support compiled patterns in `protected_namespaces` by [@sydney-runkle](https://github.com/sydney-runkle) in [#10522](https://github.com/pydantic/pydantic/pull/10522)
+* Add support for `propertyNames` in JSON schema by [@FlorianSW](https://github.com/FlorianSW) in [#10478](https://github.com/pydantic/pydantic/pull/10478)
+* Adding `__replace__` protocol for Python 3.13+ support by [@sydney-runkle](https://github.com/sydney-runkle) in [#10596](https://github.com/pydantic/pydantic/pull/10596)
+* Expose public `sort` method for JSON schema generation by [@sydney-runkle](https://github.com/sydney-runkle) in [#10595](https://github.com/pydantic/pydantic/pull/10595)
+* Add runtime validation of `@validate_call` callable argument by [@kc0506](https://github.com/kc0506) in [#10627](https://github.com/pydantic/pydantic/pull/10627)
+* Add `experimental_allow_partial` support by [@samuelcolvin](https://github.com/samuelcolvin) in [#10748](https://github.com/pydantic/pydantic/pull/10748)
+* Support default factories taking validated data as an argument by [@Viicos](https://github.com/Viicos) in [#10678](https://github.com/pydantic/pydantic/pull/10678)
+* Allow subclassing `ValidationError` and `PydanticCustomError` by [@Youssefares](https://github.com/Youssefares) in [pydantic/pydantic-core#1413](https://github.com/pydantic/pydantic-core/pull/1413)
+* Add `trailing-strings` support to `experimental_allow_partial` by [@sydney-runkle](https://github.com/sydney-runkle) in [#10825](https://github.com/pydantic/pydantic/pull/10825)
+* Add `rebuild()` method for `TypeAdapter` and simplify `defer_build` patterns by [@sydney-runkle](https://github.com/sydney-runkle) in [#10537](https://github.com/pydantic/pydantic/pull/10537)
+* Improve `TypeAdapter` instance repr by [@sydney-runkle](https://github.com/sydney-runkle) in [#10872](https://github.com/pydantic/pydantic/pull/10872)
+
+#### Changes
+
+* Don't allow customization of `SchemaGenerator` until interface is more stable by [@sydney-runkle](https://github.com/sydney-runkle) in [#10303](https://github.com/pydantic/pydantic/pull/10303)
+* Cleanly `defer_build` on `TypeAdapters`, removing experimental flag by [@sydney-runkle](https://github.com/sydney-runkle) in [#10329](https://github.com/pydantic/pydantic/pull/10329)
+* Fix `mro` of generic subclass  by [@kc0506](https://github.com/kc0506) in [#10100](https://github.com/pydantic/pydantic/pull/10100)
+* Strip whitespaces on JSON Schema title generation by [@sydney-runkle](https://github.com/sydney-runkle) in [#10404](https://github.com/pydantic/pydantic/pull/10404)
+* Use `b64decode` and `b64encode` for `Base64Bytes` type by [@sydney-runkle](https://github.com/sydney-runkle) in [#10486](https://github.com/pydantic/pydantic/pull/10486)
+* Relax protected namespace config default by [@sydney-runkle](https://github.com/sydney-runkle) in [#10441](https://github.com/pydantic/pydantic/pull/10441)
+* Revalidate parametrized generics if instance's origin is subclass of OG class by [@sydney-runkle](https://github.com/sydney-runkle) in [#10666](https://github.com/pydantic/pydantic/pull/10666)
+* Warn if configuration is specified on the `@dataclass` decorator and with the `__pydantic_config__` attribute by [@sydney-runkle](https://github.com/sydney-runkle) in [#10406](https://github.com/pydantic/pydantic/pull/10406)
+* Recommend against using `Ellipsis` (...) with `Field` by [@Viicos](https://github.com/Viicos) in [#10661](https://github.com/pydantic/pydantic/pull/10661)
+* Migrate to subclassing instead of annotated approach for pydantic url types by [@sydney-runkle](https://github.com/sydney-runkle) in [#10662](https://github.com/pydantic/pydantic/pull/10662)
+* Change JSON schema generation of `Literal`s and `Enums` by [@Viicos](https://github.com/Viicos) in [#10692](https://github.com/pydantic/pydantic/pull/10692)
+* Simplify unions involving `Any` or `Never` when replacing type variables by [@Viicos](https://github.com/Viicos) in [#10338](https://github.com/pydantic/pydantic/pull/10338)
+* Do not require padding when decoding `base64` bytes by [@bschoenmaeckers](https://github.com/bschoenmaeckers) in [pydantic/pydantic-core#1448](https://github.com/pydantic/pydantic-core/pull/1448)
+* Support dates all the way to 1BC by [@changhc](https://github.com/changhc) in [pydantic/speedate#77](https://github.com/pydantic/speedate/pull/77)
+
+#### Performance
+
+* Schema cleaning: skip unnecessary copies during schema walking by [@Viicos](https://github.com/Viicos) in [#10286](https://github.com/pydantic/pydantic/pull/10286)
+* Refactor namespace logic for annotations evaluation by [@Viicos](https://github.com/Viicos) in [#10530](https://github.com/pydantic/pydantic/pull/10530)
+* Improve email regexp on edge cases by [@AlekseyLobanov](https://github.com/AlekseyLobanov) in [#10601](https://github.com/pydantic/pydantic/pull/10601)
+* `CoreMetadata` refactor with an emphasis on documentation, schema build time performance, and reducing complexity by [@sydney-runkle](https://github.com/sydney-runkle) in [#10675](https://github.com/pydantic/pydantic/pull/10675)
+
+#### Fixes
+
+* Remove guarding check on `computed_field` with `field_serializer` by [@nix010](https://github.com/nix010) in [#10390](https://github.com/pydantic/pydantic/pull/10390)
+* Fix `Predicate` issue in `v2.9.0` by [@sydney-runkle](https://github.com/sydney-runkle) in [#10321](https://github.com/pydantic/pydantic/pull/10321)
+* Fixing `annotated-types` bound by [@sydney-runkle](https://github.com/sydney-runkle) in [#10327](https://github.com/pydantic/pydantic/pull/10327)
+* Turn `tzdata` install requirement into optional `timezone` dependency by [@jakob-keller](https://github.com/jakob-keller) in [#10331](https://github.com/pydantic/pydantic/pull/10331)
+* Use correct types namespace when building `namedtuple` core schemas by [@Viicos](https://github.com/Viicos) in [#10337](https://github.com/pydantic/pydantic/pull/10337)
+* Fix evaluation of stringified annotations during namespace inspection by [@Viicos](https://github.com/Viicos) in [#10347](https://github.com/pydantic/pydantic/pull/10347)
+* Fix `IncEx` type alias definition by [@Viicos](https://github.com/Viicos) in [#10339](https://github.com/pydantic/pydantic/pull/10339)
+* Do not error when trying to evaluate annotations of private attributes by [@Viicos](https://github.com/Viicos) in [#10358](https://github.com/pydantic/pydantic/pull/10358)
+* Fix nested type statement by [@kc0506](https://github.com/kc0506) in [#10369](https://github.com/pydantic/pydantic/pull/10369)
+* Improve typing of `ModelMetaclass.mro` by [@Viicos](https://github.com/Viicos) in [#10372](https://github.com/pydantic/pydantic/pull/10372)
+* Fix class access of deprecated `computed_field`s by [@Viicos](https://github.com/Viicos) in [#10391](https://github.com/pydantic/pydantic/pull/10391)
+* Make sure `inspect.iscoroutinefunction` works on coroutines decorated with `@validate_call` by [@MovisLi](https://github.com/MovisLi) in [#10374](https://github.com/pydantic/pydantic/pull/10374)
+* Fix `NameError` when using `validate_call` with PEP 695 on a class by [@kc0506](https://github.com/kc0506) in [#10380](https://github.com/pydantic/pydantic/pull/10380)
+* Fix `ZoneInfo` with various invalid types by [@sydney-runkle](https://github.com/sydney-runkle) in [#10408](https://github.com/pydantic/pydantic/pull/10408)
+* Fix `PydanticUserError` on empty `model_config` with annotations by [@cdwilson](https://github.com/cdwilson) in [#10412](https://github.com/pydantic/pydantic/pull/10412)
+* Fix variance issue in `_IncEx` type alias, only allow `True` by [@Viicos](https://github.com/Viicos) in [#10414](https://github.com/pydantic/pydantic/pull/10414)
+* Fix serialization schema generation when using `PlainValidator` by [@Viicos](https://github.com/Viicos) in [#10427](https://github.com/pydantic/pydantic/pull/10427)
+* Fix schema generation error when serialization schema holds references by [@Viicos](https://github.com/Viicos) in [#10444](https://github.com/pydantic/pydantic/pull/10444)
+* Inline references if possible when generating schema for `json_schema_input_type` by [@Viicos](https://github.com/Viicos) in [#10439](https://github.com/pydantic/pydantic/pull/10439)
+* Fix recursive arguments in `Representation` by [@Viicos](https://github.com/Viicos) in [#10480](https://github.com/pydantic/pydantic/pull/10480)
+* Fix representation for builtin function types by [@kschwab](https://github.com/kschwab) in [#10479](https://github.com/pydantic/pydantic/pull/10479)
+* Add python validators for decimal constraints (`max_digits` and `decimal_places`) by [@sydney-runkle](https://github.com/sydney-runkle) in [#10506](https://github.com/pydantic/pydantic/pull/10506)
+* Only fetch `__pydantic_core_schema__` from the current class during schema generation by [@Viicos](https://github.com/Viicos) in [#10518](https://github.com/pydantic/pydantic/pull/10518)
+* Fix `stacklevel` on deprecation warnings for `BaseModel` by [@sydney-runkle](https://github.com/sydney-runkle) in [#10520](https://github.com/pydantic/pydantic/pull/10520)
+* Fix warning `stacklevel` in `BaseModel.__init__` by [@Viicos](https://github.com/Viicos) in [#10526](https://github.com/pydantic/pydantic/pull/10526)
+* Improve error handling for in-evaluable refs for discriminator application by [@sydney-runkle](https://github.com/sydney-runkle) in [#10440](https://github.com/pydantic/pydantic/pull/10440)
+* Change the signature of `ConfigWrapper.core_config` to take the title directly by [@Viicos](https://github.com/Viicos) in [#10562](https://github.com/pydantic/pydantic/pull/10562)
+* Do not use the previous config from the stack for dataclasses without config by [@Viicos](https://github.com/Viicos) in [#10576](https://github.com/pydantic/pydantic/pull/10576)
+* Fix serialization for IP types with `mode='python'` by [@sydney-runkle](https://github.com/sydney-runkle) in [#10594](https://github.com/pydantic/pydantic/pull/10594)
+* Support constraint application for `Base64Etc` types by [@sydney-runkle](https://github.com/sydney-runkle) in [#10584](https://github.com/pydantic/pydantic/pull/10584)
+* Fix `validate_call` ignoring `Field` in `Annotated` by [@kc0506](https://github.com/kc0506) in [#10610](https://github.com/pydantic/pydantic/pull/10610)
+* Raise an error when `Self` is invalid by [@kc0506](https://github.com/kc0506) in [#10609](https://github.com/pydantic/pydantic/pull/10609)
+* Using `core_schema.InvalidSchema` instead of metadata injection + checks by [@sydney-runkle](https://github.com/sydney-runkle) in [#10523](https://github.com/pydantic/pydantic/pull/10523)
+* Tweak type alias logic by [@kc0506](https://github.com/kc0506) in [#10643](https://github.com/pydantic/pydantic/pull/10643)
+* Support usage of `type` with `typing.Self` and type aliases by [@kc0506](https://github.com/kc0506) in [#10621](https://github.com/pydantic/pydantic/pull/10621)
+* Use overloads for `Field` and `PrivateAttr` functions by [@Viicos](https://github.com/Viicos) in [#10651](https://github.com/pydantic/pydantic/pull/10651)
+* Clean up the `mypy` plugin implementation by [@Viicos](https://github.com/Viicos) in [#10669](https://github.com/pydantic/pydantic/pull/10669)
+* Properly check for `typing_extensions` variant of `TypeAliasType` by [@Daraan](https://github.com/Daraan) in [#10713](https://github.com/pydantic/pydantic/pull/10713)
+* Allow any mapping in `BaseModel.model_copy()` by [@Viicos](https://github.com/Viicos) in [#10751](https://github.com/pydantic/pydantic/pull/10751)
+* Fix `isinstance` behavior for urls by [@sydney-runkle](https://github.com/sydney-runkle) in [#10766](https://github.com/pydantic/pydantic/pull/10766)
+* Ensure `cached_property` can be set on Pydantic models by [@Viicos](https://github.com/Viicos) in [#10774](https://github.com/pydantic/pydantic/pull/10774)
+* Fix equality checks for primitives in literals by [@sydney-runkle](https://github.com/sydney-runkle) in [pydantic/pydantic-core#1459](https://github.com/pydantic/pydantic-core/pull/1459)
+* Properly enforce `host_required` for URLs by [@Viicos](https://github.com/Viicos) in [pydantic/pydantic-core#1488](https://github.com/pydantic/pydantic-core/pull/1488)
+* Fix when `coerce_numbers_to_str` enabled and string has invalid Unicode character by [@andrey-berenda](https://github.com/andrey-berenda) in [pydantic/pydantic-core#1515](https://github.com/pydantic/pydantic-core/pull/1515)
+* Fix serializing `complex` values in `Enum`s by [@changhc](https://github.com/changhc) in [pydantic/pydantic-core#1524](https://github.com/pydantic/pydantic-core/pull/1524)
+* Refactor `_typing_extra` module by [@Viicos](https://github.com/Viicos) in [#10725](https://github.com/pydantic/pydantic/pull/10725)
+* Support intuitive equality for urls by [@sydney-runkle](https://github.com/sydney-runkle) in [#10798](https://github.com/pydantic/pydantic/pull/10798)
+* Add `bytearray` to `TypeAdapter.validate_json` signature by [@samuelcolvin](https://github.com/samuelcolvin) in [#10802](https://github.com/pydantic/pydantic/pull/10802)
+* Ensure class access of method descriptors is performed when used as a default with `Field` by [@Viicos](https://github.com/Viicos) in [#10816](https://github.com/pydantic/pydantic/pull/10816)
+* Fix circular import with `validate_call` by [@sydney-runkle](https://github.com/sydney-runkle) in [#10807](https://github.com/pydantic/pydantic/pull/10807)
+* Fix error when using type aliases referencing other type aliases by [@Viicos](https://github.com/Viicos) in [#10809](https://github.com/pydantic/pydantic/pull/10809)
+* Fix `IncEx` type alias to be compatible with mypy by [@Viicos](https://github.com/Viicos) in [#10813](https://github.com/pydantic/pydantic/pull/10813)
+* Make `__signature__` a lazy property, do not deepcopy defaults by [@Viicos](https://github.com/Viicos) in [#10818](https://github.com/pydantic/pydantic/pull/10818)
+* Make `__signature__` lazy for dataclasses, too by [@sydney-runkle](https://github.com/sydney-runkle) in [#10832](https://github.com/pydantic/pydantic/pull/10832)
+* Subclass all single host url classes from `AnyUrl` to preserve behavior from v2.9 by [@sydney-runkle](https://github.com/sydney-runkle) in [#10856](https://github.com/pydantic/pydantic/pull/10856)
+
+### New Contributors
+
+* [@jakob-keller](https://github.com/jakob-keller) made their first contribution in [#10331](https://github.com/pydantic/pydantic/pull/10331)
+* [@MovisLi](https://github.com/MovisLi) made their first contribution in [#10374](https://github.com/pydantic/pydantic/pull/10374)
+* [@joaopalmeiro](https://github.com/joaopalmeiro) made their first contribution in [#10405](https://github.com/pydantic/pydantic/pull/10405)
+* [@theunkn0wn1](https://github.com/theunkn0wn1) made their first contribution in [#10378](https://github.com/pydantic/pydantic/pull/10378)
+* [@cdwilson](https://github.com/cdwilson) made their first contribution in [#10412](https://github.com/pydantic/pydantic/pull/10412)
+* [@dlax](https://github.com/dlax) made their first contribution in [#10421](https://github.com/pydantic/pydantic/pull/10421)
+* [@kschwab](https://github.com/kschwab) made their first contribution in [#10479](https://github.com/pydantic/pydantic/pull/10479)
+* [@santibreo](https://github.com/santibreo) made their first contribution in [#10453](https://github.com/pydantic/pydantic/pull/10453)
+* [@FlorianSW](https://github.com/FlorianSW) made their first contribution in [#10478](https://github.com/pydantic/pydantic/pull/10478)
+* [@tkasuz](https://github.com/tkasuz) made their first contribution in [#10555](https://github.com/pydantic/pydantic/pull/10555)
+* [@AlekseyLobanov](https://github.com/AlekseyLobanov) made their first contribution in [#10601](https://github.com/pydantic/pydantic/pull/10601)
+* [@NiclasvanEyk](https://github.com/NiclasvanEyk) made their first contribution in [#10667](https://github.com/pydantic/pydantic/pull/10667)
+* [@mschoettle](https://github.com/mschoettle) made their first contribution in [#10677](https://github.com/pydantic/pydantic/pull/10677)
+* [@Daraan](https://github.com/Daraan) made their first contribution in [#10713](https://github.com/pydantic/pydantic/pull/10713)
+* [@k4nar](https://github.com/k4nar) made their first contribution in [#10736](https://github.com/pydantic/pydantic/pull/10736)
+* [@UriyaHarpeness](https://github.com/UriyaHarpeness) made their first contribution in [#10740](https://github.com/pydantic/pydantic/pull/10740)
+* [@frfahim](https://github.com/frfahim) made their first contribution in [#10727](https://github.com/pydantic/pydantic/pull/10727)
+
+## v2.10.0b2 (2024-11-13)
+
+Pre-release, see [the GitHub release](https://github.com/pydantic/pydantic/releases/tag/v2.10.0b2) for details.
+
+## v2.10.0b1 (2024-11-06)
+
+Pre-release, see [the GitHub release](https://github.com/pydantic/pydantic/releases/tag/v2.9.0b1) for details.
+
+
+... see [here](https://docs.pydantic.dev/changelog/#v0322-2019-08-17) for earlier changes.
+",MIT,,Pip,https://pypi.org/project/pydantic/,pydantic,
+Quart,0.19.6,pgjones <philip.graham.jones@googlemail.com>,"# Quart
+
+![](https://raw.githubusercontent.com/pallets/quart/main/artwork/logo.png)
+
+Quart is an async Python web application framework. Using Quart you can,
+
+- render and serve HTML templates,
+- write (RESTful) JSON APIs,
+- serve WebSockets,
+- stream request and response data,
+- do pretty much anything over the HTTP or WebSocket protocols.
+
+## Quickstart
+
+Install from PyPI using an installer such as pip.
+
+```
+$ pip install quart
+```
+
+Save the following as `app.py`. This shows off rendering a template, returning
+JSON data, and using a WebSocket.
+
+```python
+from quart import Quart, render_template, websocket
+
+app = Quart(__name__)
+
+@app.route(""/"")
+async def hello():
+    return await render_template(""index.html"")
+
+@app.route(""/api"")
+async def json():
+    return {""hello"": ""world""}
+
+@app.websocket(""/ws"")
+async def ws():
+    while True:
+        await websocket.send(""hello"")
+        await websocket.send_json({""hello"": ""world""})
+```
+
+```
+$ quart run
+ * Running on http://127.0.0.1:5000 (CTRL + C to quit)
+```
+
+To deploy this app in a production setting see the [deployment] documentation.
+
+[deployment]: https://quart.palletsprojects.com/en/latest/tutorials/deployment.html
+
+## Contributing
+
+Quart is developed on [GitHub]. If you come across a bug, or have a feature
+request, please open an [issue]. To contribute a fix or implement a feature,
+follow our [contributing guide].
+
+[GitHub]: https://github.com/pallets/quart
+[issue]: https://github.com/pallets/quart/issues
+[contributing guide]: https://github.com/pallets/quart/CONTRIBUTING.rst
+
+## Help
+
+If you need help with your code, the Quart [documentation] and [cheatsheet] are
+the best places to start. You can ask for help on the [Discussions tab] or on
+our [Discord chat].
+
+[documentation]: https://quart.palletsprojects.com
+[cheatsheet]: https://quart.palletsprojects.com/en/latest/reference/cheatsheet.html
+[Discussions tab]: https://github.com/pallets/quart/discussions
+[Discord chat]: https://discord.gg
+
+## Relationship with Flask
+
+Quart is an asyncio reimplementation of the popular [Flask] web application
+framework. This means that if you understand Flask you understand Quart.
+
+Like Flask, Quart has an ecosystem of extensions for more specific needs. In
+addition, a number of the Flask extensions work with Quart.
+
+[Flask]: https://flask.palletsprojects.com
+
+### Migrating from Flask
+
+It should be possible to migrate to Quart from Flask by a find and replace of
+`flask` to `quart` and then adding `async` and `await` keywords. See the
+[migration] documentation for more help.
+
+[migration]: https://quart.palletsprojects.com/en/latest/how_to_guides/flask_migration.html
+
+",MIT,,Pip,https://pypi.org/project/Quart/,quart,
+requests,2.32.3,me@kennethreitz.org,"# Requests
+
+**Requests** is a simple, yet elegant, HTTP library.
+
+```python
+>>> import requests
+>>> r = requests.get('https://httpbin.org/basic-auth/user/pass', auth=('user', 'pass'))
+>>> r.status_code
+200
+>>> r.headers['content-type']
+'application/json; charset=utf8'
+>>> r.encoding
+'utf-8'
+>>> r.text
+'{""authenticated"": true, ...'
+>>> r.json()
+{'authenticated': True, ...}
+```
+
+Requests allows you to send HTTP/1.1 requests extremely easily. There’s no need to manually add query strings to your URLs, or to form-encode your `PUT` & `POST` data — but nowadays, just use the `json` method!
+
+Requests is one of the most downloaded Python packages today, pulling in around `30M downloads / week`— according to GitHub, Requests is currently [depended upon](https://github.com/psf/requests/network/dependents?package_id=UGFja2FnZS01NzA4OTExNg%3D%3D) by `1,000,000+` repositories. You may certainly put your trust in this code.
+
+[![Downloads](https://static.pepy.tech/badge/requests/month)](https://pepy.tech/project/requests)
+[![Supported Versions](https://img.shields.io/pypi/pyversions/requests.svg)](https://pypi.org/project/requests)
+[![Contributors](https://img.shields.io/github/contributors/psf/requests.svg)](https://github.com/psf/requests/graphs/contributors)
+
+## Installing Requests and Supported Versions
+
+Requests is available on PyPI:
+
+```console
+$ python -m pip install requests
+```
+
+Requests officially supports Python 3.8+.
+
+## Supported Features & Best–Practices
+
+Requests is ready for the demands of building robust and reliable HTTP–speaking applications, for the needs of today.
+
+- Keep-Alive & Connection Pooling
+- International Domains and URLs
+- Sessions with Cookie Persistence
+- Browser-style TLS/SSL Verification
+- Basic & Digest Authentication
+- Familiar `dict`–like Cookies
+- Automatic Content Decompression and Decoding
+- Multi-part File Uploads
+- SOCKS Proxy Support
+- Connection Timeouts
+- Streaming Downloads
+- Automatic honoring of `.netrc`
+- Chunked HTTP Requests
+
+## API Reference and User Guide available on [Read the Docs](https://requests.readthedocs.io)
+
+[![Read the Docs](https://raw.githubusercontent.com/psf/requests/main/ext/ss.png)](https://requests.readthedocs.io)
+
+## Cloning the repository
+
+When cloning the Requests repository, you may need to add the `-c
+fetch.fsck.badTimezone=ignore` flag to avoid an error about a bad commit (see
+[this issue](https://github.com/psf/requests/issues/2690) for more background):
+
+```shell
+git clone -c fetch.fsck.badTimezone=ignore https://github.com/psf/requests.git
+```
+
+You can also apply this setting to your global Git config:
+
+```shell
+git config --global fetch.fsck.badTimezone ignore
+```
+
+---
+
+[![Kenneth Reitz](https://raw.githubusercontent.com/psf/requests/main/ext/kr.png)](https://kennethreitz.org) [![Python Software Foundation](https://raw.githubusercontent.com/psf/requests/main/ext/psf.png)](https://www.python.org/psf)
+",Apache-2.0,,Pip,https://requests.readthedocs.io,requests,
+typing-extensions,4.12.2,"""Guido van Rossum, Jukka Lehtosalo, Łukasz Langa, Michael Lee"" <levkivskyi@gmail.com>","# Typing Extensions
+
+[![Chat at https://gitter.im/python/typing](https://badges.gitter.im/python/typing.svg)](https://gitter.im/python/typing)
+
+[Documentation](https://typing-extensions.readthedocs.io/en/latest/#) –
+[PyPI](https://pypi.org/project/typing-extensions/)
+
+## Overview
+
+The `typing_extensions` module serves two related purposes:
+
+- Enable use of new type system features on older Python versions. For example,
+  `typing.TypeGuard` is new in Python 3.10, but `typing_extensions` allows
+  users on previous Python versions to use it too.
+- Enable experimentation with new type system PEPs before they are accepted and
+  added to the `typing` module.
+
+`typing_extensions` is treated specially by static type checkers such as
+mypy and pyright. Objects defined in `typing_extensions` are treated the same
+way as equivalent forms in `typing`.
+
+`typing_extensions` uses
+[Semantic Versioning](https://semver.org/). The
+major version will be incremented only for backwards-incompatible changes.
+Therefore, it's safe to depend
+on `typing_extensions` like this: `typing_extensions >=x.y, <(x+1)`,
+where `x.y` is the first version that includes all features you need.
+
+## Included items
+
+See [the documentation](https://typing-extensions.readthedocs.io/en/latest/#) for a
+complete listing of module contents.
+
+## Contributing
+
+See [CONTRIBUTING.md](https://github.com/python/typing_extensions/blob/main/CONTRIBUTING.md)
+for how to contribute to `typing_extensions`.
+
+",0BSD; Python-2.0,,Pip,https://pypi.org/project/typing-extensions/,typing-extensions,
+uvicorn,0.30.6,"Tom Christie <tom@tomchristie.com>, Marcelo Trylesinski <marcelotryle@gmail.com>","<p align=""center"">
+  <img width=""320"" height=""320"" src=""https://raw.githubusercontent.com/tomchristie/uvicorn/master/docs/uvicorn.png"" alt='uvicorn'>
+</p>
+
+<p align=""center"">
+<em>An ASGI web server, for Python.</em>
+</p>
+
+---
+
+[![Build Status](https://github.com/encode/uvicorn/workflows/Test%20Suite/badge.svg)](https://github.com/encode/uvicorn/actions)
+[![Package version](https://badge.fury.io/py/uvicorn.svg)](https://pypi.python.org/pypi/uvicorn)
+[![Supported Python Version](https://img.shields.io/pypi/pyversions/uvicorn.svg?color=%2334D058)](https://pypi.org/project/uvicorn)
+
+**Documentation**: [https://www.uvicorn.org](https://www.uvicorn.org)
+
+---
+
+Uvicorn is an ASGI web server implementation for Python.
+
+Until recently Python has lacked a minimal low-level server/application interface for
+async frameworks. The [ASGI specification][asgi] fills this gap, and means we're now able to
+start building a common set of tooling usable across all async frameworks.
+
+Uvicorn supports HTTP/1.1 and WebSockets.
+
+## Quickstart
+
+Install using `pip`:
+
+```shell
+$ pip install uvicorn
+```
+
+This will install uvicorn with minimal (pure Python) dependencies.
+
+```shell
+$ pip install 'uvicorn[standard]'
+```
+
+This will install uvicorn with ""Cython-based"" dependencies (where possible) and other ""optional extras"".
+
+In this context, ""Cython-based"" means the following:
+
+- the event loop `uvloop` will be installed and used if possible.
+- the http protocol will be handled by `httptools` if possible.
+
+Moreover, ""optional extras"" means that:
+
+- the websocket protocol will be handled by `websockets` (should you want to use `wsproto` you'd need to install it manually) if possible.
+- the `--reload` flag in development mode will use `watchfiles`.
+- windows users will have `colorama` installed for the colored logs.
+- `python-dotenv` will be installed should you want to use the `--env-file` option.
+- `PyYAML` will be installed to allow you to provide a `.yaml` file to `--log-config`, if desired.
+
+Create an application, in `example.py`:
+
+```python
+async def app(scope, receive, send):
+    assert scope['type'] == 'http'
+
+    await send({
+        'type': 'http.response.start',
+        'status': 200,
+        'headers': [
+            (b'content-type', b'text/plain'),
+        ],
+    })
+    await send({
+        'type': 'http.response.body',
+        'body': b'Hello, world!',
+    })
+```
+
+Run the server:
+
+```shell
+$ uvicorn example:app
+```
+
+---
+
+## Why ASGI?
+
+Most well established Python Web frameworks started out as WSGI-based frameworks.
+
+WSGI applications are a single, synchronous callable that takes a request and returns a response.
+This doesn’t allow for long-lived connections, like you get with long-poll HTTP or WebSocket connections,
+which WSGI doesn't support well.
+
+Having an async concurrency model also allows for options such as lightweight background tasks,
+and can be less of a limiting factor for endpoints that have long periods being blocked on network
+I/O such as dealing with slow HTTP requests.
+
+---
+
+## Alternative ASGI servers
+
+A strength of the ASGI protocol is that it decouples the server implementation
+from the application framework. This allows for an ecosystem of interoperating
+webservers and application frameworks.
+
+### Daphne
+
+The first ASGI server implementation, originally developed to power Django Channels, is [the Daphne webserver][daphne].
+
+It is run widely in production, and supports HTTP/1.1, HTTP/2, and WebSockets.
+
+Any of the example applications given here can equally well be run using `daphne` instead.
+
+```
+$ pip install daphne
+$ daphne app:App
+```
+
+### Hypercorn
+
+[Hypercorn][hypercorn] was initially part of the Quart web framework, before
+being separated out into a standalone ASGI server.
+
+Hypercorn supports HTTP/1.1, HTTP/2, and WebSockets.
+
+It also supports [the excellent `trio` async framework][trio], as an alternative to `asyncio`.
+
+```
+$ pip install hypercorn
+$ hypercorn app:App
+```
+
+### Mangum
+
+[Mangum][mangum] is an adapter for using ASGI applications with AWS Lambda & API Gateway.
+
+### Granian
+
+[Granian][granian] is an ASGI compatible Rust HTTP server which supports HTTP/2, TLS and WebSockets.
+
+---
+
+<p align=""center""><i>Uvicorn is <a href=""https://github.com/encode/uvicorn/blob/master/LICENSE.md"">BSD licensed</a> code.<br/>Designed & crafted with care.</i><br/>&mdash; 🦄  &mdash;</p>
+
+[asgi]: https://asgi.readthedocs.io/en/latest/
+[daphne]: https://github.com/django/daphne
+[hypercorn]: https://github.com/pgjones/hypercorn
+[trio]: https://trio.readthedocs.io
+[mangum]: https://github.com/jordaneremieff/mangum
+[granian]: https://github.com/emmett-framework/granian
+",,BSD-3-Clause,Pip,https://pypi.org/project/uvicorn/,uvicorn,
