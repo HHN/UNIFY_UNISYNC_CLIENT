@@ -19,6 +19,8 @@ Unisync was developed as part of a subproject within the <a href="https://www.hs
 </p>
 
 # hnunisync.de - Synchronizing ILIAS Courses with Matrix Rooms
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FHHN%2FUNIFY_UNISYNC_CLIENT.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FHHN%2FUNIFY_UNISYNC_CLIENT?ref=badge_shield)
+
 
 **HNUnisync.de** is a web application designed to streamline communication and collaboration for educational institutions by synchronizing **ILIAS** (a popular learning management system) courses with **Matrix** communication rooms. The tool automates the process of syncing enrolled students from ILIAS into Matrix rooms, creating a seamless integration between course content and collaborative discussion environments.
 
@@ -122,6 +124,9 @@ For support or inquiries, please open an issue on the GitHub repository or reach
 
 ## License
 - This project is licensed under [Apache 2.0](LICENSE). Copyright 2024 , Hochschule Heilbronn.
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FHHN%2FUNIFY_UNISYNC_CLIENT.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FHHN%2FUNIFY_UNISYNC_CLIENT?ref=badge_large)
 
 ## Acknowledgments
 
